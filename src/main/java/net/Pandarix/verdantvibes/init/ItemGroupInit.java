@@ -18,6 +18,6 @@ public class ItemGroupInit {
             .icon(() -> new ItemStack(Items.LARGE_FERN)).title(Component.translatable("itemGroup." + VerdantVibes.MOD_ID))
             .displayItems((parameters, output) -> {
                 // Category
-                output.accept(Items.LARGE_FERN);
+                output.accept(BlockInit.MONKEY_LEAF.get());
             }).build());
 }

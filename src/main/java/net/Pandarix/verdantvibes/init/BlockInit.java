@@ -1,13 +1,17 @@
 package net.Pandarix.verdantvibes.init;
 
 import net.Pandarix.verdantvibes.VerdantVibes;
-import net.Pandarix.verdantvibes.block.TurnableFlowerPotBlock;
+import net.Pandarix.verdantvibes.block.custom.MonkeyLeafPlantBlock;
+import net.Pandarix.verdantvibes.block.custom.TurnableFlowerPotBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -19,8 +23,12 @@ public class BlockInit  {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, VerdantVibes.MOD_ID);
 
     // -----------BLOCKS--------------------------------------------------------------------------//
-    // -----------Category
-    public static final RegistryObject<Block> POTTED_LARGE_FERN = BLOCKS.register("potted_large_fern", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), () -> Blocks.LARGE_FERN, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
+    // -----------Plants
+    public static final RegistryObject<Block> MONKEY_LEAF = registerBlock("monkey_leaf",
+            () -> new MonkeyLeafPlantBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XYZ).ignitedByLava().pushReaction(PushReaction.DESTROY)));
+
+    // -----------Potted
+    public static final RegistryObject<Block> POTTED_MONKEY_LEAF = registerBlock("potted_monkey_leaf", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), () -> MONKEY_LEAF.get(), BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
 
     // -----------REGISTRATION--------------------------------------------------------------------------//
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

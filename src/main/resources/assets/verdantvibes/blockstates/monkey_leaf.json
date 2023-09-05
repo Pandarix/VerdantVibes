@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "verdantvibes:block/monkey_leaf",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "verdantvibes:block/monkey_leaf"
+    },
+    "facing=south": {
+      "model": "verdantvibes:block/monkey_leaf",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "verdantvibes:block/monkey_leaf",
+      "y": 270
+    }
+  }
+}
