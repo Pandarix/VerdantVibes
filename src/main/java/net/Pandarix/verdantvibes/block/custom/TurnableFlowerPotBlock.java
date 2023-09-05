@@ -31,7 +31,7 @@ public class TurnableFlowerPotBlock extends FlowerPotBlock {
     public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
         if(pPlayer.isShiftKeyDown()){
             pLevel.setBlock(pPos, pState.rotate(pLevel, pPos, Rotation.CLOCKWISE_90), 3);
-            pLevel.playSound(null, pPos, SoundEvents.GRINDSTONE_USE, SoundSource.BLOCKS, 0.5f, 1.5f);
+            pLevel.playSound(null, pPos, SoundEvents.GRINDSTONE_USE, SoundSource.BLOCKS, 0.25f, 1.5f);
             return InteractionResult.sidedSuccess(pLevel.isClientSide);
         }
         return super.use(pState, pLevel, pPos, pPlayer, pHand, pHit);
@@ -40,7 +40,9 @@ public class TurnableFlowerPotBlock extends FlowerPotBlock {
     @Override
     public void onPlace(BlockState pState, Level pLevel, BlockPos pPos, BlockState pOldState, boolean pMovedByPiston) {
         if(pOldState.getBlock() instanceof TurnableFlowerPotBlock || pOldState.getBlock() instanceof FlowerPotBlock){
-            pLevel.playSound(null, pPos, SoundEvents.CROP_PLANTED, SoundSource.BLOCKS);
+            if(pState.getBlock() != pOldState.getBlock()){
+                pLevel.playSound(null, pPos, SoundEvents.CROP_PLANTED, SoundSource.BLOCKS);
+            }
         }
         super.onPlace(pState, pLevel, pPos, pOldState, pMovedByPiston);
     }

@@ -6,6 +6,8 @@
 		"2": "block/dirt",
 		"particle": "verdantvibes:block/monkey_leaf"
 	},
+	"render_type": "cutout",
+	"ambientocclusion": false,
 	"elements": [
 		{
 			"from": [7.4, 1.3303, 9.61679],
