@@ -1,6 +1,7 @@
 package net.Pandarix.verdantvibes;
 
 import com.mojang.logging.LogUtils;
+import net.Pandarix.verdantvibes.block.TurnableFlowerPotBlock;
 import net.Pandarix.verdantvibes.init.BlockInit;
 import net.Pandarix.verdantvibes.init.ItemGroupInit;
 import net.Pandarix.verdantvibes.init.ItemInit;
@@ -13,6 +14,7 @@ import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.api.distmarker.Dist;
@@ -65,6 +67,13 @@ public class VerdantVibes
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
+        event.enqueueWork(()-> {
+            addPlants();
+        });
+    }
+
+    private static void addPlants(){
+        ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ForgeRegistries.BLOCKS.getKey(Blocks.LARGE_FERN), BlockInit.POTTED_LARGE_FERN);
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

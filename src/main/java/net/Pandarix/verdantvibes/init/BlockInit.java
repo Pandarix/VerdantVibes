@@ -1,9 +1,13 @@
 package net.Pandarix.verdantvibes.init;
 
 import net.Pandarix.verdantvibes.VerdantVibes;
+import net.Pandarix.verdantvibes.block.TurnableFlowerPotBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerPotBlock;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -16,7 +20,7 @@ public class BlockInit  {
 
     // -----------BLOCKS--------------------------------------------------------------------------//
     // -----------Category
-    //public static final RegistryObject<Block> SUSPICIOUS_RED_SAND = registerBlock("suspicious_red_sand", () -> new SusBlock(Blocks.RED_SAND, BlockBehaviour.Properties.copy(Blocks.SUSPICIOUS_SAND), SoundEvents.BRUSH_SAND, SoundEvents.BRUSH_SAND_COMPLETED));
+    public static final RegistryObject<Block> POTTED_LARGE_FERN = BLOCKS.register("potted_large_fern", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), () -> Blocks.LARGE_FERN, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
 
     // -----------REGISTRATION--------------------------------------------------------------------------//
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
