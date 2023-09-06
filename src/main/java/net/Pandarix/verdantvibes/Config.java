@@ -17,9 +17,8 @@ import java.util.stream.Collectors;
 @Mod.EventBusSubscriber(modid = VerdantVibes.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class Config
 {
-    /*
     private static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
-
+    /*
     private static final ForgeConfigSpec.BooleanValue LOG_DIRT_BLOCK = BUILDER
             .comment("Whether to log the dirt block on common setup")
             .define("logDirtBlock", true);
@@ -36,9 +35,10 @@ public class Config
     private static final ForgeConfigSpec.ConfigValue<List<? extends String>> ITEM_STRINGS = BUILDER
             .comment("A list of items to log on common setup.")
             .defineListAllowEmpty("items", List.of("minecraft:iron_ingot"), Config::validateItemName);
-
+     */
     static final ForgeConfigSpec SPEC = BUILDER.build();
 
+    /*
     public static boolean logDirtBlock;
     public static int magicNumber;
     public static String magicNumberIntroduction;

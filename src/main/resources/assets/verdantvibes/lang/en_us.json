@@ -6,5 +6,10 @@
   "block.verdantvibes.potted_monstera": "Potted Monstera",
   "block.verdantvibes.snake_plant": "Snake Plant",
   "block.verdantvibes.snake_plant.info": "Dracaena trifasciata",
-  "block.verdantvibes.potted_snake_plant": "Potted Snake Plant"
+  "block.verdantvibes.potted_snake_plant": "Potted Snake Plant",
+
+  "verdantvibes.advancements.botanicalbeginnings.title": "Botanical Beginnings",
+  "verdantvibes.advancements.botanicalbeginnings.description": "Find a new plant!",
+  "verdantvibes.advancements.horticulturalhoarder.title": "Horticultural Hoarder",
+  "verdantvibes.advancements.horticulturalhoarder.description": "Find all the new plants!"
 }

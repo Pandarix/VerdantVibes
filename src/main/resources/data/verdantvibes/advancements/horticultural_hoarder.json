@@ -1,0 +1,53 @@
+{
+  "parent": "verdantvibes:botanical_beginnings",
+  "criteria": {
+    "find_monstera": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "verdantvibes:monstera"
+            ]
+          }
+        ]
+      }
+    },
+    "find_snake_plant": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "verdantvibes:snake_plant"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "icon": {
+      "item": "verdantvibes:monstera"
+    },
+    "title": {
+      "translate": "verdantvibes.advancements.horticulturalhoarder.title"
+    },
+    "description": {
+      "translate": "verdantvibes.advancements.horticulturalhoarder.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "requirements": [
+    [
+      "find_monstera"
+    ],
+    [
+      "find_snake_plant"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

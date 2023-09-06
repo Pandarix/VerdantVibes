@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "item": "verdantvibes:monstera"
+    },
+    "title": {
+      "translate": "verdantvibes.advancements.botanicalbeginnings.title"
+    },
+    "description": {
+      "translate": "verdantvibes.advancements.botanicalbeginnings.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "minecraft:husbandry/root",
+  "criteria": {
+    "find_plant": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "minecraft:stone_tool_materials"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "find_plant"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
