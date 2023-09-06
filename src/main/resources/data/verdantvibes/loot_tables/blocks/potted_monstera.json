@@ -26,11 +26,10 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "verdantvibes:monkey_leaf"
+          "name": "verdantvibes:monstera"
         }
       ],
       "rolls": 1.0
     }
-  ],
-  "random_sequence": "verdantvibes:blocks/potted_monkey_leaf"
+  ]
 }

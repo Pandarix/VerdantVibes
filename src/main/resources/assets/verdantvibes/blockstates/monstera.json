@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "verdantvibes:block/monstera",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "verdantvibes:block/monstera"
+    },
+    "facing=south": {
+      "model": "verdantvibes:block/monstera",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "verdantvibes:block/monstera",
+      "y": 270
+    }
+  }
+}

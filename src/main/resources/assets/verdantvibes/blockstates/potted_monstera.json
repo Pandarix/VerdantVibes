@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "verdantvibes:block/potted_monstera",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "verdantvibes:block/potted_monstera"
+    },
+    "facing=south": {
+      "model": "verdantvibes:block/potted_monstera",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "verdantvibes:block/potted_monstera",
+      "y": 270
+    }
+  }
+}

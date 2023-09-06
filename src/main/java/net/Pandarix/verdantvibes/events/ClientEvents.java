@@ -14,8 +14,8 @@ public class ClientEvents {
     public static class ClientModBusEvents {
         @SubscribeEvent
         public static void clientSetup(FMLClientSetupEvent event) {
-            ItemBlockRenderTypes.setRenderLayer(BlockInit.MONKEY_LEAF.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(BlockInit.POTTED_MONKEY_LEAF.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(BlockInit.MONSTERA.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(BlockInit.POTTED_MONSTERA.get(), RenderType.cutout());
         }
     }
 }
