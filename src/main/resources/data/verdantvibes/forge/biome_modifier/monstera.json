@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "features": "verdantvibes:monstera",
+  "biomes": "#minecraft:is_jungle",
+  "step": "vegetal_decoration"
+}

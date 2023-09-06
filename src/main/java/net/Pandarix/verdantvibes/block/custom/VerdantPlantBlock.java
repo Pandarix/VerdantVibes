@@ -4,10 +4,14 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -20,7 +24,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class VerdantPlantBlock extends BushBlock {
+public class VerdantPlantBlock extends BushBlock implements BonemealableBlock {
     private static final VoxelShape SHAPE = Block.box(2, 0, 2, 14, 14, 14);
 
     public VerdantPlantBlock(Properties pProperties) {
@@ -74,5 +78,20 @@ public class VerdantPlantBlock extends BushBlock {
     public void appendHoverText(ItemStack pStack, @Nullable BlockGetter pLevel, List<Component> pTooltip, TooltipFlag pFlag) {
         pTooltip.add(Component.translatable("block."+ForgeRegistries.BLOCKS.getKey(this).toLanguageKey() + ".info").withStyle(ChatFormatting.DARK_GRAY, ChatFormatting.ITALIC));
         super.appendHoverText(pStack, pLevel, pTooltip, pFlag);
+    }
+
+    @Override
+    public boolean isValidBonemealTarget(LevelReader pLevel, BlockPos pPos, BlockState pState, boolean pIsClient) {
+        return true;
+    }
+
+    @Override
+    public boolean isBonemealSuccess(Level pLevel, RandomSource pRandom, BlockPos pPos, BlockState pState) {
+        return true;
+    }
+
+    @Override
+    public void performBonemeal(ServerLevel pLevel, RandomSource pRandom, BlockPos pPos, BlockState pState) {
+        popResource(pLevel, pPos, new ItemStack(this));
     }
 }
