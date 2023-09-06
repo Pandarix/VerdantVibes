@@ -1,7 +1,7 @@
 package net.Pandarix.verdantvibes.init;
 
 import net.Pandarix.verdantvibes.VerdantVibes;
-import net.Pandarix.verdantvibes.block.custom.MonsteraPlantBlock;
+import net.Pandarix.verdantvibes.block.custom.VerdantPlantBlock;
 import net.Pandarix.verdantvibes.block.custom.TurnableFlowerPotBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -25,7 +25,7 @@ public class BlockInit  {
     // -----------BLOCKS--------------------------------------------------------------------------//
     // -----------Plants
     public static final RegistryObject<Block> MONSTERA = registerBlock("monstera",
-            () -> new MonsteraPlantBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.CHERRY_SAPLING).offsetType(BlockBehaviour.OffsetType.XYZ).ignitedByLava().pushReaction(PushReaction.DESTROY)));
+            () -> new VerdantPlantBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.CHERRY_SAPLING).offsetType(BlockBehaviour.OffsetType.XYZ).ignitedByLava().pushReaction(PushReaction.DESTROY)));
 
     // -----------Potted
     public static final RegistryObject<Block> POTTED_MONSTERA = registerBlock("potted_monstera", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), () -> MONSTERA.get(), BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
