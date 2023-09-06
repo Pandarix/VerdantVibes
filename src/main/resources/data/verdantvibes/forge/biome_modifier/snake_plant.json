@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "features": "verdantvibes:snake_plant",
+  "biomes": "#forge:is_desert",
+  "step": "vegetal_decoration"
+}

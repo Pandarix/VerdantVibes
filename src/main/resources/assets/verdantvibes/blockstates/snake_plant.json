@@ -1,0 +1,57 @@
+{
+  "variants": {
+    "facing=east": [
+      {
+        "model": "verdantvibes:block/snake_plant",
+        "y": 90
+      },
+      {
+        "model": "verdantvibes:block/snake_plant_1",
+        "y": 90
+      },
+      {
+        "model": "verdantvibes:block/snake_plant_2",
+        "y": 90
+      }
+    ],
+    "facing=north": [
+      {
+        "model": "verdantvibes:block/snake_plant"
+      },
+      {
+        "model": "verdantvibes:block/snake_plant_1"
+      },
+      {
+        "model": "verdantvibes:block/snake_plant_2"
+      }
+    ],
+    "facing=south": [
+      {
+        "model": "verdantvibes:block/snake_plant",
+        "y": 180
+      },
+      {
+        "model": "verdantvibes:block/snake_plant_1",
+        "y": 180
+      },
+      {
+        "model": "verdantvibes:block/snake_plant_2",
+        "y": 180
+      }
+    ],
+    "facing=west": [
+      {
+        "model": "verdantvibes:block/snake_plant",
+        "y": 270
+      },
+      {
+        "model": "verdantvibes:block/snake_plant_1",
+        "y": 270
+      },
+      {
+        "model": "verdantvibes:block/snake_plant_2",
+        "y": 270
+      }
+    ]
+  }
+}

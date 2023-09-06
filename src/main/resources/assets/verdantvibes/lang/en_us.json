@@ -3,5 +3,8 @@
 
   "block.verdantvibes.monstera": "Monstera",
   "block.verdantvibes.monstera.info": "Monstera deliciosa",
-  "block.verdantvibes.potted_monstera": "Potted Monstera"
+  "block.verdantvibes.potted_monstera": "Potted Monstera",
+  "block.verdantvibes.snake_plant": "Snake Plant",
+  "block.verdantvibes.snake_plant.info": "Dracaena trifasciata",
+  "block.verdantvibes.potted_snake_plant": "Potted Snake Plant"
 }

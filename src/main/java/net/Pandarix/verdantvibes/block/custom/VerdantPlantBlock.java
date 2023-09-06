@@ -1,10 +1,12 @@
 package net.Pandarix.verdantvibes.block.custom;
 
+import net.Pandarix.verdantvibes.VerdantVibes;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
@@ -26,10 +28,20 @@ import java.util.List;
 
 public class VerdantPlantBlock extends BushBlock implements BonemealableBlock {
     private static final VoxelShape SHAPE = Block.box(2, 0, 2, 14, 14, 14);
+    private final boolean mayPlaceOnSand;
 
-    public VerdantPlantBlock(Properties pProperties) {
+    public VerdantPlantBlock(Properties pProperties, boolean pMayPlaceOnSand) {
         super(pProperties);
+        this.mayPlaceOnSand = pMayPlaceOnSand;
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
+    }
+
+    @Override
+    protected boolean mayPlaceOn(BlockState pState, BlockGetter pLevel, BlockPos pPos) {
+        if (pState.is(BlockTags.SAND) && this.mayPlaceOnSand) {
+            return true;
+        }
+        return super.mayPlaceOn(pState, pLevel, pPos);
     }
 
     @Override
@@ -51,6 +63,7 @@ public class VerdantPlantBlock extends BushBlock implements BonemealableBlock {
     /**
      * Returns the blockstate with the given rotation from the passed blockstate. If inapplicable, returns the passed
      * blockstate.
+     *
      * @deprecated call via {@link net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#rotate} whenever
      * possible. Implementing/overriding is fine.
      */
@@ -61,6 +74,7 @@ public class VerdantPlantBlock extends BushBlock implements BonemealableBlock {
     /**
      * Returns the blockstate with the given mirror of the passed blockstate. If inapplicable, returns the passed
      * blockstate.
+     *
      * @deprecated call via {@link net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#mirror} whenever
      * possible. Implementing/overriding is fine.
      */
@@ -76,7 +90,7 @@ public class VerdantPlantBlock extends BushBlock implements BonemealableBlock {
 
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable BlockGetter pLevel, List<Component> pTooltip, TooltipFlag pFlag) {
-        pTooltip.add(Component.translatable("block."+ForgeRegistries.BLOCKS.getKey(this).toLanguageKey() + ".info").withStyle(ChatFormatting.DARK_GRAY, ChatFormatting.ITALIC));
+        pTooltip.add(Component.translatable("block." + ForgeRegistries.BLOCKS.getKey(this).toLanguageKey() + ".info").withStyle(ChatFormatting.DARK_GRAY, ChatFormatting.ITALIC));
         super.appendHoverText(pStack, pLevel, pTooltip, pFlag);
     }
 

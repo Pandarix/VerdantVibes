@@ -25,10 +25,15 @@ public class BlockInit  {
     // -----------BLOCKS--------------------------------------------------------------------------//
     // -----------Plants
     public static final RegistryObject<Block> MONSTERA = registerBlock("monstera",
-            () -> new VerdantPlantBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.CHERRY_SAPLING).offsetType(BlockBehaviour.OffsetType.XZ).ignitedByLava().pushReaction(PushReaction.DESTROY)));
+            () -> new VerdantPlantBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.CHERRY_SAPLING).offsetType(BlockBehaviour.OffsetType.XZ).ignitedByLava().pushReaction(PushReaction.DESTROY), false));
+
+    public static final RegistryObject<Block> SNAKE_PLANT = registerBlock("snake_plant",
+            () -> new VerdantPlantBlock(BlockBehaviour.Properties.copy(MONSTERA.get()), true));
 
     // -----------Potted
-    public static final RegistryObject<Block> POTTED_MONSTERA = registerBlock("potted_monstera", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), () -> MONSTERA.get(), BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
+    public static final RegistryObject<Block> POTTED_MONSTERA = registerBlock("potted_monstera", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), MONSTERA, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
+
+    public static final RegistryObject<Block> POTTED_SNAKE_PLANT = registerBlock("potted_snake_plant", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), SNAKE_PLANT, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
 
     // -----------REGISTRATION--------------------------------------------------------------------------//
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

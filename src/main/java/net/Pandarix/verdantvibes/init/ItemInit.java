@@ -11,5 +11,5 @@ public class ItemInit {
 
     // -----------ITEMS--------------------------------------------------------------------------//
     // -----------Category
-    //public static final RegistryObject<Item> ARTIFACT_SHARDS = ITEMS.register("artifact_shards", () -> new Item(new Item.Properties().rarity(Rarity.UNCOMMON)));
+    //public static final RegistryObject<Item> TEST = ITEMS.register("test", () -> new Item(new Item.Properties()));
 }

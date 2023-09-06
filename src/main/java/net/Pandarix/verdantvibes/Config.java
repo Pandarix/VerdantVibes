@@ -17,6 +17,7 @@ import java.util.stream.Collectors;
 @Mod.EventBusSubscriber(modid = VerdantVibes.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class Config
 {
+    /*
     private static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
 
     private static final ForgeConfigSpec.BooleanValue LOG_DIRT_BLOCK = BUILDER
@@ -60,4 +61,5 @@ public class Config
                 .map(itemName -> ForgeRegistries.ITEMS.getValue(new ResourceLocation(itemName)))
                 .collect(Collectors.toSet());
     }
+     */
 }

@@ -18,5 +18,6 @@ public class ItemGroupInit {
             .displayItems((parameters, output) -> {
                 // Category
                 output.accept(BlockInit.MONSTERA.get());
+                output.accept(BlockInit.SNAKE_PLANT.get());
             }).build());
 }
