@@ -30,10 +30,15 @@ public class BlockInit  {
     public static final RegistryObject<Block> SNAKE_PLANT = registerBlock("snake_plant",
             () -> new VerdantPlantBlock(BlockBehaviour.Properties.copy(MONSTERA.get()), true));
 
+    public static final RegistryObject<Block> PARLOUR_PALM = registerBlock("parlour_palm",
+            () -> new VerdantPlantBlock(BlockBehaviour.Properties.copy(MONSTERA.get()), false));
+
     // -----------Potted
     public static final RegistryObject<Block> POTTED_MONSTERA = registerBlock("potted_monstera", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), MONSTERA, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
 
     public static final RegistryObject<Block> POTTED_SNAKE_PLANT = registerBlock("potted_snake_plant", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), SNAKE_PLANT, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
+
+    public static final RegistryObject<Block> POTTED_PARLOUR_PALM = registerBlock("potted_parlour_palm", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), PARLOUR_PALM, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
 
     // -----------REGISTRATION--------------------------------------------------------------------------//
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

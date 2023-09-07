@@ -24,6 +24,18 @@
           }
         ]
       }
+    },
+    "find_parlour_palm": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "verdantvibes:parlour_palm"
+            ]
+          }
+        ]
+      }
     }
   },
   "display": {
@@ -47,6 +59,9 @@
     ],
     [
       "find_snake_plant"
+    ],
+    [
+      "find_parlour_palm"
     ]
   ],
   "sends_telemetry_event": true

@@ -1,9 +1,9 @@
 {
-  "feature": "verdantvibes:snake_plant",
+  "feature": "verdantvibes:parlour_palm",
   "placement": [
     {
       "type": "minecraft:rarity_filter",
-      "chance": 24
+      "chance": 6
     },
     {
       "type": "minecraft:in_square"

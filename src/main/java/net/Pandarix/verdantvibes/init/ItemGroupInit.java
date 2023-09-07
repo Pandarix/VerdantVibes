@@ -19,5 +19,6 @@ public class ItemGroupInit {
                 // Category
                 output.accept(BlockInit.MONSTERA.get());
                 output.accept(BlockInit.SNAKE_PLANT.get());
+                output.accept(BlockInit.PARLOUR_PALM.get());
             }).build());
 }
