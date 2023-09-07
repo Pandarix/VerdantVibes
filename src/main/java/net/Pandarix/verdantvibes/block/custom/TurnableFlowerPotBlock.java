@@ -1,7 +1,11 @@
 package net.Pandarix.verdantvibes.block.custom;
 
+import net.Pandarix.verdantvibes.VerdantVibes;
+import net.minecraft.advancements.Advancement;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
@@ -29,7 +33,15 @@ public class TurnableFlowerPotBlock extends FlowerPotBlock {
 
     @Override
     public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
-        if(pPlayer.isShiftKeyDown()){
+        if (pPlayer.isShiftKeyDown()) {
+            if (pLevel.getServer() != null) {
+                Advancement advancement = pLevel.getServer().getAdvancements().getAdvancement(ADVANCEMENT_ID);
+                if (advancement != null) {
+                    if (pPlayer instanceof ServerPlayer player) {
+                        player.getAdvancements().award(advancement, "planted_pot");
+                    }
+                }
+            }
             pLevel.setBlock(pPos, pState.rotate(pLevel, pPos, Rotation.CLOCKWISE_90), 3);
             pLevel.playSound(null, pPos, SoundEvents.GRINDSTONE_USE, SoundSource.BLOCKS, 0.25f, 1.5f);
             return InteractionResult.sidedSuccess(pLevel.isClientSide);
@@ -39,8 +51,8 @@ public class TurnableFlowerPotBlock extends FlowerPotBlock {
 
     @Override
     public void onPlace(BlockState pState, Level pLevel, BlockPos pPos, BlockState pOldState, boolean pMovedByPiston) {
-        if(pOldState.getBlock() instanceof TurnableFlowerPotBlock || pOldState.getBlock() instanceof FlowerPotBlock){
-            if(pState.getBlock() != pOldState.getBlock()){
+        if (pOldState.getBlock() instanceof TurnableFlowerPotBlock || pOldState.getBlock() instanceof FlowerPotBlock) {
+            if (pState.getBlock() != pOldState.getBlock()) {
                 pLevel.playSound(null, pPos, SoundEvents.CROP_PLANTED, SoundSource.BLOCKS);
             }
         }
@@ -53,6 +65,7 @@ public class TurnableFlowerPotBlock extends FlowerPotBlock {
     /**
      * Returns the blockstate with the given rotation from the passed blockstate. If inapplicable, returns the passed
      * blockstate.
+     *
      * @deprecated call via {@link net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#rotate} whenever
      * possible. Implementing/overriding is fine.
      */
@@ -63,6 +76,7 @@ public class TurnableFlowerPotBlock extends FlowerPotBlock {
     /**
      * Returns the blockstate with the given mirror of the passed blockstate. If inapplicable, returns the passed
      * blockstate.
+     *
      * @deprecated call via {@link net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#mirror} whenever
      * possible. Implementing/overriding is fine.
      */
@@ -79,6 +93,9 @@ public class TurnableFlowerPotBlock extends FlowerPotBlock {
     public RenderShape getRenderShape(BlockState pState) {
         return RenderShape.MODEL;
     }
+
+    //advancement id for granting the advancement in onBreak, condition of advancement is "impossible" and needs to be executed here
+    ResourceLocation ADVANCEMENT_ID = new ResourceLocation(VerdantVibes.MOD_ID, "potters_pivot");
 
     public BlockState getStateForPlacement(BlockPlaceContext pContext) {
         return this.defaultBlockState().setValue(FACING, pContext.getHorizontalDirection().getOpposite());

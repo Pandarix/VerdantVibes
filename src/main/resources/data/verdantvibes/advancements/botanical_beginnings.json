@@ -21,7 +21,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "minecraft:stone_tool_materials"
+            "tag": "verdantvibes:verdantvibes_plants"
           }
         ]
       }

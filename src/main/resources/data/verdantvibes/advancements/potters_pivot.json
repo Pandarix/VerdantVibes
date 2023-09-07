@@ -1,0 +1,29 @@
+{
+  "parent": "verdantvibes:botanical_beginnings",
+  "criteria": {
+    "planted_pot": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "icon": {
+      "item": "verdantvibes:potted_monstera"
+    },
+    "title": {
+      "translate": "verdantvibes.advancements.potterspivot.title"
+    },
+    "description": {
+      "translate": "verdantvibes.advancements.potterspivot.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "requirements": [
+    [
+      "planted_pot"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
