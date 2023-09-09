@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "features": "verdantvibes:money_tree",
+  "biomes": "#forge:is_swamp",
+  "step": "vegetal_decoration"
+}

@@ -1,6 +1,5 @@
 package net.Pandarix.verdantvibes.block.custom;
 
-import net.Pandarix.verdantvibes.VerdantVibes;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -21,6 +20,7 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraftforge.common.IPlantable;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.Nullable;
 
@@ -28,17 +28,20 @@ import java.util.List;
 
 public class VerdantPlantBlock extends BushBlock implements BonemealableBlock {
     private static final VoxelShape SHAPE = Block.box(2, 0, 2, 14, 14, 14);
-    private final boolean mayPlaceOnSand;
+    private final List<Block> mayPlaceOn;
 
-    public VerdantPlantBlock(Properties pProperties, boolean pMayPlaceOnSand) {
+    public VerdantPlantBlock(Properties pProperties, List<Block> mayPlaceOn) {
         super(pProperties);
-        this.mayPlaceOnSand = pMayPlaceOnSand;
+        this.mayPlaceOn = mayPlaceOn;
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
     }
 
     @Override
     protected boolean mayPlaceOn(BlockState pState, BlockGetter pLevel, BlockPos pPos) {
-        if (pState.is(BlockTags.SAND) && this.mayPlaceOnSand) {
+        if (mayPlaceOn.contains(pState.getBlock())) {
+            if(pState.is(Blocks.WATER)){
+                return !pLevel.getBlockState(pPos.below()).is(Blocks.WATER);
+            }
             return true;
         }
         return super.mayPlaceOn(pState, pLevel, pPos);

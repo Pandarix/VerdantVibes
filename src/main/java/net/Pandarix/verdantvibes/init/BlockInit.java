@@ -5,10 +5,8 @@ import net.Pandarix.verdantvibes.block.custom.VerdantPlantBlock;
 import net.Pandarix.verdantvibes.block.custom.TurnableFlowerPotBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.FlowerPotBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.item.PlaceOnWaterBlockItem;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
@@ -16,6 +14,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import java.util.List;
 import java.util.function.Supplier;
 
 public class BlockInit  {
@@ -25,13 +24,16 @@ public class BlockInit  {
     // -----------BLOCKS--------------------------------------------------------------------------//
     // -----------Plants
     public static final RegistryObject<Block> MONSTERA = registerBlock("monstera",
-            () -> new VerdantPlantBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.CHERRY_SAPLING).offsetType(BlockBehaviour.OffsetType.XZ).ignitedByLava().pushReaction(PushReaction.DESTROY), false));
+            () -> new VerdantPlantBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.CHERRY_SAPLING).offsetType(BlockBehaviour.OffsetType.XZ).ignitedByLava().pushReaction(PushReaction.DESTROY), List.of()));
 
     public static final RegistryObject<Block> SNAKE_PLANT = registerBlock("snake_plant",
-            () -> new VerdantPlantBlock(BlockBehaviour.Properties.copy(MONSTERA.get()), true));
+            () -> new VerdantPlantBlock(BlockBehaviour.Properties.copy(MONSTERA.get()), List.of(Blocks.SAND, Blocks.RED_SAND)));
 
     public static final RegistryObject<Block> PARLOUR_PALM = registerBlock("parlour_palm",
-            () -> new VerdantPlantBlock(BlockBehaviour.Properties.copy(MONSTERA.get()), false));
+            () -> new VerdantPlantBlock(BlockBehaviour.Properties.copy(MONSTERA.get()), List.of()));
+
+    public static final RegistryObject<Block> MONEY_TREE = registerWaterPlaceableBlock("money_tree",
+            () -> new VerdantPlantBlock(BlockBehaviour.Properties.copy(MONSTERA.get()), List.of(Blocks.WATER)));
 
     // -----------Potted
     public static final RegistryObject<Block> POTTED_MONSTERA = registerBlock("potted_monstera", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), MONSTERA, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
@@ -39,6 +41,8 @@ public class BlockInit  {
     public static final RegistryObject<Block> POTTED_SNAKE_PLANT = registerBlock("potted_snake_plant", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), SNAKE_PLANT, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
 
     public static final RegistryObject<Block> POTTED_PARLOUR_PALM = registerBlock("potted_parlour_palm", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), PARLOUR_PALM, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
+
+    public static final RegistryObject<Block> POTTED_MONEY_TREE = registerBlock("potted_money_tree", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), MONEY_TREE, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
 
     // -----------REGISTRATION--------------------------------------------------------------------------//
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
@@ -49,5 +53,15 @@ public class BlockInit  {
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
         return ItemInit.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+    }
+
+    private static <T extends Block> RegistryObject<T> registerWaterPlaceableBlock(String name, Supplier<T> block) {
+        RegistryObject<T> toReturn = BLOCKS.register(name, block);
+        registerWaterPlaceableBlockItem(name, toReturn);
+        return toReturn;
+    }
+
+    private static <T extends Block> RegistryObject<Item> registerWaterPlaceableBlockItem(String name, RegistryObject<T> block) {
+        return ItemInit.ITEMS.register(name, () -> new PlaceOnWaterBlockItem(block.get(), new Item.Properties()));
     }
 }

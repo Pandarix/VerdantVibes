@@ -36,6 +36,18 @@
           }
         ]
       }
+    },
+    "find_money_tree": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "verdantvibes:money_tree"
+            ]
+          }
+        ]
+      }
     }
   },
   "display": {
@@ -62,6 +74,9 @@
     ],
     [
       "find_parlour_palm"
+    ],
+    [
+      "find_money_tree"
     ]
   ],
   "sends_telemetry_event": true

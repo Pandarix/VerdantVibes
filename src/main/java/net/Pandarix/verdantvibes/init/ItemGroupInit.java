@@ -20,5 +20,6 @@ public class ItemGroupInit {
                 output.accept(BlockInit.MONSTERA.get());
                 output.accept(BlockInit.SNAKE_PLANT.get());
                 output.accept(BlockInit.PARLOUR_PALM.get());
+                output.accept(BlockInit.MONEY_TREE.get());
             }).build());
 }
