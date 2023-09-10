@@ -62,7 +62,7 @@
               0
             ],
             "blocks": [
-              "minecraft:water",
+              "minecraft:dirt",
               "minecraft:mud"
             ]
           }

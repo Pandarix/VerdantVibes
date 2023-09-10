@@ -30,10 +30,10 @@ public class BlockInit  {
             () -> new VerdantPlantBlock(BlockBehaviour.Properties.copy(MONSTERA.get()), List.of(Blocks.SAND, Blocks.RED_SAND)));
 
     public static final RegistryObject<Block> PARLOUR_PALM = registerBlock("parlour_palm",
-            () -> new VerdantPlantBlock(BlockBehaviour.Properties.copy(MONSTERA.get()), List.of()));
+            () -> new VerdantPlantBlock(BlockBehaviour.Properties.copy(MONSTERA.get()), List.of(Blocks.SAND)));
 
     public static final RegistryObject<Block> MONEY_TREE = registerWaterPlaceableBlock("money_tree",
-            () -> new VerdantPlantBlock(BlockBehaviour.Properties.copy(MONSTERA.get()), List.of(Blocks.WATER)));
+            () -> new VerdantPlantBlock(BlockBehaviour.Properties.copy(MONSTERA.get()), List.of(Blocks.MUD)));
 
     // -----------Potted
     public static final RegistryObject<Block> POTTED_MONSTERA = registerBlock("potted_monstera", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), MONSTERA, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
