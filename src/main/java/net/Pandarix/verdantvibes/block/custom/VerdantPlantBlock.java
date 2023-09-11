@@ -27,12 +27,13 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class VerdantPlantBlock extends BushBlock implements BonemealableBlock {
-    private static final VoxelShape SHAPE = Block.box(2, 0, 2, 14, 14, 14);
+    private final VoxelShape voxelShape;
     private final List<Block> mayPlaceOn;
 
-    public VerdantPlantBlock(Properties pProperties, List<Block> mayPlaceOn) {
+    public VerdantPlantBlock(Properties pProperties, List<Block> mayPlaceOn, VoxelShape pVoxelShape) {
         super(pProperties);
         this.mayPlaceOn = mayPlaceOn;
+        this.voxelShape = pVoxelShape;
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
     }
 
@@ -49,7 +50,7 @@ public class VerdantPlantBlock extends BushBlock implements BonemealableBlock {
 
     @Override
     public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
-        return SHAPE;
+        return voxelShape;
     }
 
     public BlockState getStateForPlacement(BlockPlaceContext pContext) {

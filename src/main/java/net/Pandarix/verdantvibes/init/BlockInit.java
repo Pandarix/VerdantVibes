@@ -24,16 +24,16 @@ public class BlockInit  {
     // -----------BLOCKS--------------------------------------------------------------------------//
     // -----------Plants
     public static final RegistryObject<Block> MONSTERA = registerBlock("monstera",
-            () -> new VerdantPlantBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.CHERRY_SAPLING).offsetType(BlockBehaviour.OffsetType.XZ).ignitedByLava().pushReaction(PushReaction.DESTROY), List.of()));
+            () -> new VerdantPlantBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.CHERRY_SAPLING).offsetType(BlockBehaviour.OffsetType.XZ).ignitedByLava().pushReaction(PushReaction.DESTROY), List.of(), Block.box(3, 0, 3, 13, 15, 13)));
 
     public static final RegistryObject<Block> SNAKE_PLANT = registerBlock("snake_plant",
-            () -> new VerdantPlantBlock(BlockBehaviour.Properties.copy(MONSTERA.get()), List.of(Blocks.SAND, Blocks.RED_SAND)));
+            () -> new VerdantPlantBlock(BlockBehaviour.Properties.copy(MONSTERA.get()), List.of(Blocks.SAND, Blocks.RED_SAND), Block.box(2, 0, 2, 14, 16, 14)));
 
     public static final RegistryObject<Block> PARLOUR_PALM = registerBlock("parlour_palm",
-            () -> new VerdantPlantBlock(BlockBehaviour.Properties.copy(MONSTERA.get()), List.of(Blocks.SAND)));
+            () -> new VerdantPlantBlock(BlockBehaviour.Properties.copy(MONSTERA.get()), List.of(Blocks.SAND), Block.box(2, 0, 2, 14, 22, 14)));
 
     public static final RegistryObject<Block> MONEY_TREE = registerWaterPlaceableBlock("money_tree",
-            () -> new VerdantPlantBlock(BlockBehaviour.Properties.copy(MONSTERA.get()), List.of(Blocks.MUD)));
+            () -> new VerdantPlantBlock(BlockBehaviour.Properties.copy(MONSTERA.get()), List.of(Blocks.MUD), Block.box(3, 0, 3, 13, 10, 13)));
 
     // -----------Potted
     public static final RegistryObject<Block> POTTED_MONSTERA = registerBlock("potted_monstera", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), MONSTERA, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
