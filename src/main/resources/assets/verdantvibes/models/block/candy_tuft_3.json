@@ -1,5 +1,5 @@
 {
-  "parent": "verdantvibes:block/flowerpatch_2",
+  "parent": "verdantvibes:block/flowerpatch_3",
   "ambientocclusion": false,
   "render_type": "cutout",
   "textures": {

@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "features": "verdantvibes:candy_tuft",
+  "biomes": "#forge:is_mountain",
+  "step": "vegetal_decoration"
+}
