@@ -1,0 +1,72 @@
+{
+  "variants": {
+    "flower_amount=1": [
+      {
+        "model": "verdantvibes:block/candy_tuft_2"
+      },
+      {
+        "model": "verdantvibes:block/candy_tuft_2",
+        "y": 90
+      },
+      {
+        "model": "verdantvibes:block/candy_tuft_2",
+        "y": 180
+      },
+      {
+        "model": "verdantvibes:block/candy_tuft_2",
+        "y": 270
+      }
+    ],
+    "flower_amount=2": [
+      {
+        "model": "verdantvibes:block/candy_tuft_1"
+      },
+      {
+        "model": "verdantvibes:block/candy_tuft_1",
+        "y": 90
+      },
+      {
+        "model": "verdantvibes:block/candy_tuft_1",
+        "y": 180
+      },
+      {
+        "model": "verdantvibes:block/candy_tuft_1",
+        "y": 270
+      }
+    ],
+    "flower_amount=3": [
+      {
+        "model": "verdantvibes:block/candy_tuft"
+      },
+      {
+        "model": "verdantvibes:block/candy_tuft",
+        "y": 90
+      },
+      {
+        "model": "verdantvibes:block/candy_tuft",
+        "y": 180
+      },
+      {
+        "model": "verdantvibes:block/candy_tuft",
+        "y": 270
+      }
+    ],
+    "flower_amount=4": [
+      {
+        "model": "verdantvibes:block/candy_tuft"
+      },
+      {
+        "model": "verdantvibes:block/candy_tuft",
+        "y": 90
+      },
+      {
+        "model": "verdantvibes:block/candy_tuft",
+        "y": 180
+      },
+      {
+        "model": "verdantvibes:block/candy_tuft",
+        "y": 270
+      }
+    ]
+  }
+}

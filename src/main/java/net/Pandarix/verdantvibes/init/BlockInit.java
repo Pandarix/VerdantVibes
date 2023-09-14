@@ -1,6 +1,7 @@
 package net.Pandarix.verdantvibes.init;
 
 import net.Pandarix.verdantvibes.VerdantVibes;
+import net.Pandarix.verdantvibes.block.custom.VerdantPetalPlantBlock;
 import net.Pandarix.verdantvibes.block.custom.VerdantPlantBlock;
 import net.Pandarix.verdantvibes.block.custom.TurnableFlowerPotBlock;
 import net.minecraft.world.item.BlockItem;
@@ -34,6 +35,9 @@ public class BlockInit  {
 
     public static final RegistryObject<Block> MONEY_TREE = registerWaterPlaceableBlock("money_tree",
             () -> new VerdantPlantBlock(BlockBehaviour.Properties.copy(MONSTERA.get()), List.of(Blocks.MUD), Block.box(3, 0, 3, 13, 10, 13)));
+
+    public static final RegistryObject<Block> CANDY_TUFT = registerBlock("candy_tuft",
+            () -> new VerdantPetalPlantBlock(BlockBehaviour.Properties.copy(MONSTERA.get()).offsetType(BlockBehaviour.OffsetType.NONE), List.of(Blocks.GRAVEL), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 3.0D, 16.0D)));
 
     // -----------Potted
     public static final RegistryObject<Block> POTTED_MONSTERA = registerBlock("potted_monstera", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), MONSTERA, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
