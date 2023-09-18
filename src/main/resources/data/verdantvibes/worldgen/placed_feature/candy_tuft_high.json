@@ -1,0 +1,28 @@
+{
+  "feature": "verdantvibes:candy_tuft_high",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 4
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "min_inclusive": {
+          "absolute": 125
+        },
+        "max_inclusive": {
+          "absolute": 250
+        }
+      }
+    }
+  ]
+}

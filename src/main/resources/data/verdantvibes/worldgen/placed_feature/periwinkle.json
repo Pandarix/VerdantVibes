@@ -1,9 +1,9 @@
 {
-  "feature": "verdantvibes:candy_tuft",
+  "feature": "verdantvibes:periwinkle",
   "placement": [
     {
       "type": "minecraft:rarity_filter",
-      "chance": 4
+      "chance": 12
     },
     {
       "type": "minecraft:in_square"

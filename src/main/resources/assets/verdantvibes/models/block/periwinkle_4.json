@@ -1,0 +1,10 @@
+{
+  "parent": "verdantvibes:block/flowerpatch_4",
+  "ambientocclusion": false,
+  "render_type": "cutout",
+  "textures": {
+    "flowerbed": "verdantvibes:block/periwinkle",
+    "stem": "verdantvibes:block/candy_tuft_stem",
+    "green": "verdantvibes:block/candy_tuft_green"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "features": "verdantvibes:periwinkle",
+  "biomes": "#minecraft:is_forest",
+  "step": "vegetal_decoration"
+}

@@ -37,7 +37,10 @@ public class BlockInit  {
             () -> new VerdantPlantBlock(BlockBehaviour.Properties.copy(MONSTERA.get()), List.of(Blocks.MUD), Block.box(3, 0, 3, 13, 10, 13)));
 
     public static final RegistryObject<Block> CANDY_TUFT = registerBlock("candy_tuft",
-            () -> new VerdantPetalPlantBlock(BlockBehaviour.Properties.copy(Blocks.PINK_PETALS), List.of(Blocks.GRAVEL), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 3.0D, 16.0D)));
+            () -> new VerdantPetalPlantBlock(BlockBehaviour.Properties.copy(Blocks.PINK_PETALS), List.of(Blocks.GRAVEL, Blocks.COARSE_DIRT), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 3.0D, 16.0D)));
+
+    public static final RegistryObject<Block> PERIWINKLE = registerBlock("periwinkle",
+            () -> new VerdantPetalPlantBlock(BlockBehaviour.Properties.copy(Blocks.PINK_PETALS), List.of(), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 3.0D, 16.0D)));
 
     // -----------Potted
     public static final RegistryObject<Block> POTTED_MONSTERA = registerBlock("potted_monstera", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), MONSTERA, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));

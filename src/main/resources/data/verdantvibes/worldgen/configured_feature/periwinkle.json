@@ -1,7 +1,7 @@
 {
   "type": "minecraft:flower",
   "config": {
-    "tries": 80,
+    "tries": 128,
     "xz_spread": 6,
     "y_spread": 5,
     "feature": {
@@ -14,7 +14,7 @@
               {
                 "weight": 1,
                 "data": {
-                  "Name": "verdantvibes:candy_tuft",
+                  "Name": "verdantvibes:periwinkle",
                   "Properties": {
                     "facing": "north",
                     "flower_amount": "1"
@@ -24,7 +24,7 @@
               {
                 "weight": 1,
                 "data": {
-                  "Name": "verdantvibes:candy_tuft",
+                  "Name": "verdantvibes:periwinkle",
                   "Properties": {
                     "facing": "east",
                     "flower_amount": "1"
@@ -34,7 +34,7 @@
               {
                 "weight": 1,
                 "data": {
-                  "Name": "verdantvibes:candy_tuft",
+                  "Name": "verdantvibes:periwinkle",
                   "Properties": {
                     "facing": "south",
                     "flower_amount": "1"
@@ -44,7 +44,7 @@
               {
                 "weight": 1,
                 "data": {
-                  "Name": "verdantvibes:candy_tuft",
+                  "Name": "verdantvibes:periwinkle",
                   "Properties": {
                     "facing": "west",
                     "flower_amount": "1"
@@ -54,7 +54,7 @@
               {
                 "weight": 1,
                 "data": {
-                  "Name": "verdantvibes:candy_tuft",
+                  "Name": "verdantvibes:periwinkle",
                   "Properties": {
                     "facing": "north",
                     "flower_amount": "2"
@@ -64,7 +64,7 @@
               {
                 "weight": 1,
                 "data": {
-                  "Name": "verdantvibes:candy_tuft",
+                  "Name": "verdantvibes:periwinkle",
                   "Properties": {
                     "facing": "east",
                     "flower_amount": "2"
@@ -74,7 +74,7 @@
               {
                 "weight": 1,
                 "data": {
-                  "Name": "verdantvibes:candy_tuft",
+                  "Name": "verdantvibes:periwinkle",
                   "Properties": {
                     "facing": "south",
                     "flower_amount": "2"
@@ -84,7 +84,7 @@
               {
                 "weight": 1,
                 "data": {
-                  "Name": "verdantvibes:candy_tuft",
+                  "Name": "verdantvibes:periwinkle",
                   "Properties": {
                     "facing": "west",
                     "flower_amount": "2"
@@ -94,7 +94,7 @@
               {
                 "weight": 1,
                 "data": {
-                  "Name": "verdantvibes:candy_tuft",
+                  "Name": "verdantvibes:periwinkle",
                   "Properties": {
                     "facing": "north",
                     "flower_amount": "3"
@@ -104,7 +104,7 @@
               {
                 "weight": 1,
                 "data": {
-                  "Name": "verdantvibes:candy_tuft",
+                  "Name": "verdantvibes:periwinkle",
                   "Properties": {
                     "facing": "east",
                     "flower_amount": "3"
@@ -114,7 +114,7 @@
               {
                 "weight": 1,
                 "data": {
-                  "Name": "verdantvibes:candy_tuft",
+                  "Name": "verdantvibes:periwinkle",
                   "Properties": {
                     "facing": "south",
                     "flower_amount": "3"
@@ -124,7 +124,7 @@
               {
                 "weight": 1,
                 "data": {
-                  "Name": "verdantvibes:candy_tuft",
+                  "Name": "verdantvibes:periwinkle",
                   "Properties": {
                     "facing": "west",
                     "flower_amount": "3"
@@ -134,7 +134,7 @@
               {
                 "weight": 1,
                 "data": {
-                  "Name": "verdantvibes:candy_tuft",
+                  "Name": "verdantvibes:periwinkle",
                   "Properties": {
                     "facing": "north",
                     "flower_amount": "4"
@@ -144,7 +144,7 @@
               {
                 "weight": 1,
                 "data": {
-                  "Name": "verdantvibes:candy_tuft",
+                  "Name": "verdantvibes:periwinkle",
                   "Properties": {
                     "facing": "east",
                     "flower_amount": "4"
@@ -154,7 +154,7 @@
               {
                 "weight": 1,
                 "data": {
-                  "Name": "verdantvibes:candy_tuft",
+                  "Name": "verdantvibes:periwinkle",
                   "Properties": {
                     "facing": "south",
                     "flower_amount": "4"
@@ -164,7 +164,7 @@
               {
                 "weight": 1,
                 "data": {
-                  "Name": "verdantvibes:candy_tuft",
+                  "Name": "verdantvibes:periwinkle",
                   "Properties": {
                     "facing": "west",
                     "flower_amount": "4"
