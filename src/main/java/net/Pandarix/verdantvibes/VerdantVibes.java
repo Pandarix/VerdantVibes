@@ -63,6 +63,7 @@ public class VerdantVibes
         ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ForgeRegistries.BLOCKS.getKey(BlockInit.SNAKE_PLANT.get()), BlockInit.POTTED_SNAKE_PLANT);
         ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ForgeRegistries.BLOCKS.getKey(BlockInit.PARLOUR_PALM.get()), BlockInit.POTTED_PARLOUR_PALM);
         ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ForgeRegistries.BLOCKS.getKey(BlockInit.MONEY_TREE.get()), BlockInit.POTTED_MONEY_TREE);
+        ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ForgeRegistries.BLOCKS.getKey(BlockInit.LOBELIA.get()), BlockInit.POTTED_LOBELIA);
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
