@@ -11,14 +11,17 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
+import net.minecraft.world.phys.shapes.BooleanOp;
+import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.List;
 import java.util.function.Supplier;
+import java.util.stream.Stream;
 
-public class BlockInit  {
+public class BlockInit {
     // Create a Deferred Register to hold Blocks which will all be registered under the "VerdantVibes" namespace
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, VerdantVibes.MOD_ID);
 
@@ -36,6 +39,9 @@ public class BlockInit  {
     public static final RegistryObject<Block> MONEY_TREE = registerWaterPlaceableBlock("money_tree",
             () -> new VerdantPlantBlock(BlockBehaviour.Properties.copy(MONSTERA.get()), List.of(Blocks.MUD), Block.box(3, 0, 3, 13, 10, 13)));
 
+    public static final RegistryObject<Block> LOBELIA = registerWaterPlaceableBlock("lobelia",
+            () -> new VerdantPlantBlock(BlockBehaviour.Properties.copy(MONSTERA.get()), List.of(), Block.box(3, 0, 3, 13, 14, 13)));
+
     public static final RegistryObject<Block> CANDY_TUFT = registerBlock("candy_tuft",
             () -> new VerdantPetalPlantBlock(BlockBehaviour.Properties.copy(Blocks.PINK_PETALS), List.of(Blocks.GRAVEL, Blocks.COARSE_DIRT), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 3.0D, 16.0D)));
 
@@ -50,6 +56,8 @@ public class BlockInit  {
     public static final RegistryObject<Block> POTTED_PARLOUR_PALM = registerBlock("potted_parlour_palm", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), PARLOUR_PALM, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
 
     public static final RegistryObject<Block> POTTED_MONEY_TREE = registerBlock("potted_money_tree", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), MONEY_TREE, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
+
+    public static final RegistryObject<Block> POTTED_LOBELIA = registerBlock("potted_lobelia", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), MONEY_TREE, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
 
     // -----------REGISTRATION--------------------------------------------------------------------------//
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

@@ -48,6 +48,18 @@
           }
         ]
       }
+    },
+    "find_lobelia": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "verdantvibes:lobelia"
+            ]
+          }
+        ]
+      }
     }
   },
   "display": {
@@ -77,6 +89,9 @@
     ],
     [
       "find_money_tree"
+    ],
+    [
+      "find_lobelia"
     ]
   ],
   "sends_telemetry_event": true

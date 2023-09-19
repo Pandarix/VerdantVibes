@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "features": "verdantvibes:lobelia",
+  "biomes": "#minecraft:is_savanna",
+  "step": "vegetal_decoration"
+}

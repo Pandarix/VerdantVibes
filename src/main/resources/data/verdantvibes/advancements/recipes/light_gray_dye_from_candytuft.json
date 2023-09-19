@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_candytuft": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "verdantvibes:candy_tuft"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "verdantvibes:light_gray_dye_from_candytuft"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_candytuft",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "verdantvibes:light_gray_dye_from_candytuft"
+    ]
+  }
+}
