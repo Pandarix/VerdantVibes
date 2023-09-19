@@ -1,3 +1,6 @@
 {
-	"parent": "verdantvibes:block/money_tree"
-}e
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "verdantvibes:item/money_tree"
+	}
+}

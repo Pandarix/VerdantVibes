@@ -1,3 +1,6 @@
 {
-	"parent": "verdantvibes:block/parlour_palm"
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "verdantvibes:item/parlour_palm"
+	}
 }
