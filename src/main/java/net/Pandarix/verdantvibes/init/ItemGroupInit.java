@@ -24,5 +24,6 @@ public class ItemGroupInit {
                 output.accept(BlockInit.LOBELIA.get());
                 output.accept(BlockInit.CANDY_TUFT.get());
                 output.accept(BlockInit.PERIWINKLE.get());
+                output.accept(BlockInit.IVY.get());
             }).build());
 }

@@ -1,0 +1,40 @@
+{
+	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
+	"render_type": "cutout",
+	"texture_size": [32, 32],
+	"textures": {
+		"1": "verdantvibes:block/ivy",
+		"2": "verdantvibes:block/ivy_extra",
+		"particle": "verdantvibes:block/ivy_extra"
+	},
+	"elements": [
+		{
+			"from": [0, -7, 0.8],
+			"to": [16, 16, 0.8],
+			"shade": false,
+			"faces": {
+				"north": {"uv": [12, 2.5, 4, 14], "texture": "#1", "tintindex": 0},
+				"south": {"uv": [4, 2.5, 12, 14], "texture": "#1", "tintindex": 0}
+			}
+		},
+		{
+			"from": [0, -6, 1.6],
+			"to": [16, 17, 1.6],
+			"shade": false,
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 0, 1]},
+			"faces": {
+				"north": {"uv": [12, 2.5, 4, 14], "texture": "#2", "tintindex": 0},
+				"south": {"uv": [4, 2.5, 12, 14], "texture": "#2", "tintindex": 0}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "group",
+			"origin": [0, 0, 1],
+			"color": 0,
+			"children": [0, 1]
+		}
+	]
+}

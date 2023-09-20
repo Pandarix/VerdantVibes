@@ -1,9 +1,10 @@
 package net.Pandarix.verdantvibes.init;
 
 import net.Pandarix.verdantvibes.VerdantVibes;
+import net.Pandarix.verdantvibes.block.custom.TurnableFlowerPotBlock;
 import net.Pandarix.verdantvibes.block.custom.VerdantPetalPlantBlock;
 import net.Pandarix.verdantvibes.block.custom.VerdantPlantBlock;
-import net.Pandarix.verdantvibes.block.custom.TurnableFlowerPotBlock;
+import net.Pandarix.verdantvibes.block.custom.VerdantVineBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.PlaceOnWaterBlockItem;
@@ -11,15 +12,12 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
-import net.minecraft.world.phys.shapes.BooleanOp;
-import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.List;
 import java.util.function.Supplier;
-import java.util.stream.Stream;
 
 public class BlockInit {
     // Create a Deferred Register to hold Blocks which will all be registered under the "VerdantVibes" namespace
@@ -47,6 +45,9 @@ public class BlockInit {
 
     public static final RegistryObject<Block> PERIWINKLE = registerBlock("periwinkle",
             () -> new VerdantPetalPlantBlock(BlockBehaviour.Properties.copy(Blocks.PINK_PETALS), List.of(), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 3.0D, 16.0D)));
+
+    public static final RegistryObject<Block> IVY = registerBlock("ivy",
+            () -> new VerdantVineBlock(BlockBehaviour.Properties.copy(Blocks.VINE)));
 
     // -----------Potted
     public static final RegistryObject<Block> POTTED_MONSTERA = registerBlock("potted_monstera", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), MONSTERA, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
