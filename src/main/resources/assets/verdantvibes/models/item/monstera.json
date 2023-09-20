@@ -1,3 +1,6 @@
 {
-	"parent": "verdantvibes:block/monstera"
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "verdantvibes:item/monstera"
+	}
 }
