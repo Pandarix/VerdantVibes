@@ -16,8 +16,10 @@ import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BambooLeaves;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.common.IPlantable;
@@ -47,10 +49,10 @@ public class VerdantPlantBlock extends BushBlock implements BonemealableBlock {
         }
         return super.mayPlaceOn(pState, pLevel, pPos);
     }
-
     @Override
     public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
-        return voxelShape;
+        Vec3 vec3 = pState.getOffset(pLevel, pPos);
+        return voxelShape.move(vec3.x, vec3.y, vec3.z);
     }
 
     public BlockState getStateForPlacement(BlockPlaceContext pContext) {

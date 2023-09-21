@@ -22,6 +22,7 @@ public class ItemGroupInit {
                 output.accept(BlockInit.PARLOUR_PALM.get());
                 output.accept(BlockInit.MONEY_TREE.get());
                 output.accept(BlockInit.LOBELIA.get());
+                output.accept(BlockInit.DRAGON_TREE.get());
                 output.accept(BlockInit.CANDY_TUFT.get());
                 output.accept(BlockInit.PERIWINKLE.get());
                 output.accept(BlockInit.IVY.get());

@@ -1,0 +1,57 @@
+{
+  "variants": {
+    "facing=east": [
+      {
+        "model": "verdantvibes:block/dragon_tree",
+        "y": 90
+      },
+      {
+        "model": "verdantvibes:block/dragon_tree_1",
+        "y": 90
+      },
+      {
+        "model": "verdantvibes:block/dragon_tree_2",
+        "y": 90
+      }
+    ],
+    "facing=north": [
+      {
+        "model": "verdantvibes:block/dragon_tree"
+      },
+      {
+        "model": "verdantvibes:block/dragon_tree_1"
+      },
+      {
+        "model": "verdantvibes:block/dragon_tree_2"
+      }
+    ],
+    "facing=south": [
+      {
+        "model": "verdantvibes:block/dragon_tree",
+        "y": 180
+      },
+      {
+        "model": "verdantvibes:block/dragon_tree_1",
+        "y": 180
+      },
+      {
+        "model": "verdantvibes:block/dragon_tree_2",
+        "y": 180
+      }
+    ],
+    "facing=west": [
+      {
+        "model": "verdantvibes:block/dragon_tree",
+        "y": 270
+      },
+      {
+        "model": "verdantvibes:block/dragon_tree_1",
+        "y": 270
+      },
+      {
+        "model": "verdantvibes:block/dragon_tree_2",
+        "y": 270
+      }
+    ]
+  }
+}
