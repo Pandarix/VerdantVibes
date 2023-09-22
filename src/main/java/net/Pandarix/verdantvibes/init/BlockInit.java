@@ -62,6 +62,8 @@ public class BlockInit {
 
     public static final RegistryObject<Block> POTTED_MONEY_TREE = registerBlock("potted_money_tree", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), MONEY_TREE, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
 
+    public static final RegistryObject<Block> POTTED_DRAGON_TREE = registerBlock("potted_dragon_tree", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), DRAGON_TREE, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
+
     public static final RegistryObject<Block> POTTED_LOBELIA = registerBlock("potted_lobelia", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), MONEY_TREE, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
 
     // -----------REGISTRATION--------------------------------------------------------------------------//
