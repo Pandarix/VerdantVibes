@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "features": "verdantvibes:dragon_tree",
+  "biomes": "#minecraft:is_savanna",
+  "step": "vegetal_decoration"
+}
