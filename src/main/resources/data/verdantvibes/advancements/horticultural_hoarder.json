@@ -60,6 +60,18 @@
           }
         ]
       }
+    },
+    "find_dragon_tree": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "verdantvibes:dragon_tree"
+            ]
+          }
+        ]
+      }
     }
   },
   "display": {
@@ -92,6 +104,9 @@
     ],
     [
       "find_lobelia"
+    ],
+    [
+      "find_dragon_tree"
     ]
   ],
   "sends_telemetry_event": true
