@@ -4,8 +4,8 @@
 	"render_type": "cutout",
 	"texture_size": [32, 32],
 	"textures": {
-		"1": "verdantvibes:block/ivy",
-		"2": "verdantvibes:block/ivy_extra",
+		"1": "verdantvibes:block/ivy_tintable",
+		"2": "verdantvibes:block/ivy_extra_tintable",
 		"particle": "verdantvibes:block/ivy_extra"
 	},
 	"elements": [
@@ -14,8 +14,18 @@
 			"to": [16, 16, 0.8],
 			"shade": false,
 			"faces": {
-				"north": {"uv": [12, 2.5, 4, 14], "texture": "#1", "tintindex": 0},
-				"south": {"uv": [4, 2.5, 12, 14], "texture": "#1", "tintindex": 0}
+				"north": {"uv": [8, 2.5, 0, 14], "texture": "#1", "tintindex": 0},
+				"south": {"uv": [0, 2.5, 8, 14], "texture": "#1", "tintindex": 0}
+			}
+		},
+		{
+			"name": "wood",
+			"from": [0, -7, 0.8],
+			"to": [16, 16, 0.8],
+			"shade": false,
+			"faces": {
+				"north": {"uv": [16, 2.5, 8, 14], "texture": "#1"},
+				"south": {"uv": [8, 2.5, 16, 14], "texture": "#1"}
 			}
 		},
 		{
@@ -34,7 +44,7 @@
 			"name": "group",
 			"origin": [0, 0, 1],
 			"color": 0,
-			"children": [0, 1]
+			"children": [0, 1, 2]
 		}
 	]
 }
