@@ -17,7 +17,7 @@ public class ColorHandler
         //Foliage Coloring
         event.getBlockColors().register((state, world, pos, tintIndex) ->
                         world != null && pos != null ? BiomeColors.getAverageFoliageColor(world, pos) : FoliageColor.getDefaultColor(),
-                BlockInit.PARLOUR_PALM.get(), BlockInit.DRAGON_TREE.get(), BlockInit.MONSTERA.get());
+                BlockInit.PARLOUR_PALM.get(), BlockInit.DRAGON_TREE.get(), BlockInit.MONSTERA.get(), BlockInit.CANDY_TUFT.get(), BlockInit.PERIWINKLE.get(), BlockInit.LOBELIA.get());
     }
 
     /*

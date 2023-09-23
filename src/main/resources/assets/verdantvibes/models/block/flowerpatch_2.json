@@ -18,8 +18,8 @@
 			"from": [0, 0.5, 8],
 			"to": [8, 0.5, 16],
 			"faces": {
-				"up": {"uv": [0, 8, 8, 16], "texture": "#green"},
-				"down": {"uv": [0, 16, 8, 8], "texture": "#green"}
+				"up": {"uv": [0, 8, 8, 16], "texture": "#green", "tintindex": 1},
+				"down": {"uv": [0, 16, 8, 8], "texture": "#green", "tintindex": 1}
 			}
 		},
 		{
