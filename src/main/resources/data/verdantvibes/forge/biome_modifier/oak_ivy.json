@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "features": "verdantvibes:oak_ivy_placed",
+  "biomes": "minecraft:forest",
+  "step": "vegetal_decoration"
+}

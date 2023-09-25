@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import net.Pandarix.verdantvibes.init.BlockInit;
 import net.Pandarix.verdantvibes.init.ItemGroupInit;
 import net.Pandarix.verdantvibes.init.ItemInit;
+import net.Pandarix.verdantvibes.init.TreeDecoratorInit;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
@@ -43,6 +44,8 @@ public class VerdantVibes
         ItemInit.ITEMS.register(modEventBus);
         // Register the Deferred Register to the mod event bus so tabs get registered
         ItemGroupInit.CREATIVE_MODE_TABS.register(modEventBus);
+
+        TreeDecoratorInit.DECORATORS.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
