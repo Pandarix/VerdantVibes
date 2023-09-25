@@ -1,6 +1,9 @@
 {
   "type": "forge:add_features",
   "features": "verdantvibes:birch_ivy_placed",
-  "biomes": "minecraft:birch_forest",
+  "biomes": [
+    "minecraft:birch_forest",
+    "minecraft:old_growth_birch_forest"
+  ],
   "step": "vegetal_decoration"
 }

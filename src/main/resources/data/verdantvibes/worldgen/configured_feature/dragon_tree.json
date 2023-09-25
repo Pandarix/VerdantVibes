@@ -46,6 +46,46 @@
                     "facing": "west"
                   }
                 }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "Name": "verdantvibes:tall_dragon_tree",
+                  "Properties": {
+                    "facing": "north",
+                    "half": "lower"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "Name": "verdantvibes:tall_dragon_tree",
+                  "Properties": {
+                    "facing": "south",
+                    "half": "lower"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "Name": "verdantvibes:tall_dragon_tree",
+                  "Properties": {
+                    "facing": "east",
+                    "half": "lower"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "Name": "verdantvibes:tall_dragon_tree",
+                  "Properties": {
+                    "facing": "west",
+                    "half": "lower"
+                  }
+                }
               }
             ]
           }

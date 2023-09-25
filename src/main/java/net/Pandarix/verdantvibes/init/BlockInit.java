@@ -1,10 +1,7 @@
 package net.Pandarix.verdantvibes.init;
 
 import net.Pandarix.verdantvibes.VerdantVibes;
-import net.Pandarix.verdantvibes.block.custom.TurnableFlowerPotBlock;
-import net.Pandarix.verdantvibes.block.custom.VerdantPetalPlantBlock;
-import net.Pandarix.verdantvibes.block.custom.VerdantPlantBlock;
-import net.Pandarix.verdantvibes.block.custom.VerdantVineBlock;
+import net.Pandarix.verdantvibes.block.custom.*;
 import net.minecraft.client.resources.sounds.Sound;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -38,11 +35,14 @@ public class BlockInit {
     public static final RegistryObject<Block> MONEY_TREE = registerWaterPlaceableBlock("money_tree",
             () -> new VerdantPlantBlock(BlockBehaviour.Properties.copy(MONSTERA.get()), List.of(Blocks.MUD), Block.box(3, 0, 3, 13, 10, 13)));
 
-    public static final RegistryObject<Block> LOBELIA = registerWaterPlaceableBlock("lobelia",
+    public static final RegistryObject<Block> LOBELIA = registerBlock("lobelia",
             () -> new VerdantPlantBlock(BlockBehaviour.Properties.copy(MONSTERA.get()), List.of(), Block.box(3, 0, 3, 13, 14, 13)));
 
-    public static final RegistryObject<Block> DRAGON_TREE = registerWaterPlaceableBlock("dragon_tree",
-            () -> new VerdantPlantBlock(BlockBehaviour.Properties.copy(MONSTERA.get()).sound(SoundType.GRASS), List.of(), Block.box(2, 0, 3, 13, 23, 13)));
+    public static final RegistryObject<Block> TALL_DRAGON_TREE = registerBlock("tall_dragon_tree",
+            () -> new VerdantTallPlantBlock(BlockBehaviour.Properties.copy(MONSTERA.get()).sound(SoundType.GRASS).strength(0.2f), List.of(Blocks.SAND), Block.box(2, 0, 3, 13, 16, 13)));
+
+    public static final RegistryObject<Block> DRAGON_TREE = registerBlock("dragon_tree",
+            () -> new VerdantGrowablePlantBlock(BlockBehaviour.Properties.copy(TALL_DRAGON_TREE.get()), List.of(Blocks.SAND), Block.box(2, 0, 3, 13, 23, 13), (VerdantTallPlantBlock) TALL_DRAGON_TREE.get()));
 
     public static final RegistryObject<Block> CANDY_TUFT = registerBlock("candy_tuft",
             () -> new VerdantPetalPlantBlock(BlockBehaviour.Properties.copy(Blocks.PINK_PETALS), List.of(Blocks.GRAVEL, Blocks.COARSE_DIRT), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 3.0D, 16.0D)));
