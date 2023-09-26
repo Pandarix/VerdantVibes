@@ -38,7 +38,7 @@ public class BlockInit {
     public static final RegistryObject<Block> LOBELIA = registerBlock("lobelia",
             () -> new VerdantPlantBlock(BlockBehaviour.Properties.copy(MONSTERA.get()), List.of(), Block.box(3, 0, 3, 13, 14, 13)));
 
-    public static final RegistryObject<Block> TALL_DRAGON_TREE = registerBlock("tall_dragon_tree",
+    public static final RegistryObject<Block> TALL_DRAGON_TREE = registerBlockWithoutItem("tall_dragon_tree",
             () -> new VerdantTallPlantBlock(BlockBehaviour.Properties.copy(MONSTERA.get()).sound(SoundType.GRASS).strength(0.2f), List.of(Blocks.SAND), Block.box(2, 0, 3, 13, 16, 13)));
 
     public static final RegistryObject<Block> DRAGON_TREE = registerBlock("dragon_tree",
@@ -71,6 +71,10 @@ public class BlockInit {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
         return toReturn;
+    }
+
+    private static <T extends Block> RegistryObject<T> registerBlockWithoutItem(String name, Supplier<T> block) {
+        return BLOCKS.register(name, block);
     }
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
