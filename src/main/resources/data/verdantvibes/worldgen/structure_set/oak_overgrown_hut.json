@@ -1,0 +1,17 @@
+{
+  "structures": [
+    {
+      "structure": "verdantvibes:oak_overgrown_hut",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+
+    "salt": 1805767004,
+
+    "spacing": 48,
+
+    "separation": 12
+  }
+}
