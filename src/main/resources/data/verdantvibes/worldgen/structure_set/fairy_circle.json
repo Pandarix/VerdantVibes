@@ -1,0 +1,17 @@
+{
+  "structures": [
+    {
+      "structure": "verdantvibes:fairy_circle",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+
+    "salt": 1805767002,
+
+    "spacing": 48,
+
+    "separation": 12
+  }
+}
