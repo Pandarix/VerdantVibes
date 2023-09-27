@@ -72,6 +72,18 @@
           }
         ]
       }
+    },
+    "find_ivy": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "verdantvibes:ivy"
+            ]
+          }
+        ]
+      }
     }
   },
   "display": {
@@ -107,6 +119,9 @@
     ],
     [
       "find_dragon_tree"
+    ],
+    [
+      "find_ivy"
     ]
   ],
   "sends_telemetry_event": true
