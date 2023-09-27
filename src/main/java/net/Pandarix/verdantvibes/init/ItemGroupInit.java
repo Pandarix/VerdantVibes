@@ -17,6 +17,7 @@ public class ItemGroupInit {
             .icon(() -> new ItemStack(BlockInit.MONEY_TREE.get())).title(Component.translatable("itemGroup." + VerdantVibes.MOD_ID))
             .displayItems((parameters, output) -> {
                 // Category
+                output.accept(BlockInit.GARDENING_TABLE.get());
                 output.accept(BlockInit.MONSTERA.get());
                 output.accept(BlockInit.SNAKE_PLANT.get());
                 output.accept(BlockInit.PARLOUR_PALM.get());

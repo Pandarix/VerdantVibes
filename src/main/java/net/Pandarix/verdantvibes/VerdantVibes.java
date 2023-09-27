@@ -1,10 +1,8 @@
 package net.Pandarix.verdantvibes;
 
 import com.mojang.logging.LogUtils;
-import net.Pandarix.verdantvibes.init.BlockInit;
-import net.Pandarix.verdantvibes.init.ItemGroupInit;
-import net.Pandarix.verdantvibes.init.ItemInit;
-import net.Pandarix.verdantvibes.init.TreeDecoratorInit;
+import net.Pandarix.verdantvibes.init.*;
+import net.Pandarix.verdantvibes.woldgen.VillageBuildings;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
@@ -47,11 +45,10 @@ public class VerdantVibes
 
         TreeDecoratorInit.DECORATORS.register(modEventBus);
 
+        VillagerInit.register(modEventBus);
+
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
-
-        // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)

@@ -1,6 +1,7 @@
 {
   "itemGroup.verdantvibes": "Verdant Vibes",
 
+  "block.verdantvibes.gardening_table": "Gardening Table",
   "block.verdantvibes.monstera": "Monstera",
   "block.verdantvibes.monstera.info": "Monstera deliciosa",
   "block.verdantvibes.potted_monstera": "Potted Monstera",
@@ -25,6 +26,8 @@
   "block.verdantvibes.periwinkle.info": "Vinca minor",
   "block.verdantvibes.ivy": "Ivy",
   "block.verdantvibes.ivy.info": "Hedera helix",
+
+  "entity.minecraft.villager.verdantvibes.gardener": "Gardener",
 
   "verdantvibes.advancements.botanicalbeginnings.title": "Botanical Beginnings",
   "verdantvibes.advancements.botanicalbeginnings.description": "Let's display it in a pot!",

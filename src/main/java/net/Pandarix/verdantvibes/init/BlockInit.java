@@ -2,11 +2,13 @@ package net.Pandarix.verdantvibes.init;
 
 import net.Pandarix.verdantvibes.VerdantVibes;
 import net.Pandarix.verdantvibes.block.custom.*;
-import net.minecraft.client.resources.sounds.Sound;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.PlaceOnWaterBlockItem;
-import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerPotBlock;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
@@ -22,6 +24,10 @@ public class BlockInit {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, VerdantVibes.MOD_ID);
 
     // -----------BLOCKS--------------------------------------------------------------------------//
+    // -----------Gardening Table
+    public static final RegistryObject<Block> GARDENING_TABLE = registerBlock("gardening_table",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)));
+
     // -----------Plants
     public static final RegistryObject<Block> MONSTERA = registerBlock("monstera",
             () -> new VerdantPlantBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.CHERRY_SAPLING).offsetType(BlockBehaviour.OffsetType.XZ).ignitedByLava().pushReaction(PushReaction.DESTROY), List.of(), Block.box(3, 0, 3, 13, 15, 13)));

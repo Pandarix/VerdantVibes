@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "minecraft:block/barrel_bottom",
+    "north": "verdantvibes:block/gardening_table_side",
+    "east": "verdantvibes:block/gardening_table_front",
+    "particle": "verdantvibes:block/gardening_table_front",
+    "south": "verdantvibes:block/gardening_table_side",
+    "up": "verdantvibes:block/gardening_table_top",
+    "west": "verdantvibes:block/gardening_table_front"
+  }
+}
