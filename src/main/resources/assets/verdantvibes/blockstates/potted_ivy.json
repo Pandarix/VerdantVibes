@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=east": [
+      {
+        "model": "verdantvibes:block/potted_ivy",
+        "y": 90
+      }
+    ],
+    "facing=north": [
+      {
+        "model": "verdantvibes:block/potted_ivy"
+      }
+    ],
+    "facing=south": [
+      {
+        "model": "verdantvibes:block/potted_ivy",
+        "y": 180
+      }
+    ],
+    "facing=west": [
+      {
+        "model": "verdantvibes:block/potted_ivy",
+        "y": 270
+      }
+    ]
+  }
+}
