@@ -78,5 +78,8 @@ public class VillageBuildings {
         addBuildingToPool(templatePoolRegistry, processorListRegistry,
                 new ResourceLocation("minecraft:village/plains/streets"),
                 "verdantvibes:gardener_plains", 2);
+        addBuildingToPool(templatePoolRegistry, processorListRegistry,
+                new ResourceLocation("minecraft:village/taiga/streets"),
+                "verdantvibes:gardener_taiga", 2);
     }
 }

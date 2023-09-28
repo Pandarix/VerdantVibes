@@ -14,7 +14,7 @@ public class ItemGroupInit {
 
     // Creates a creative tab with the id "VerdantVibes:example_tab" for the example item, that is placed after the combat tab
     public static final RegistryObject<CreativeModeTab> VERDANT_VIBES_ITEMGROUP = CREATIVE_MODE_TABS.register("verdantvibes", () -> CreativeModeTab.builder()
-            .icon(() -> new ItemStack(BlockInit.MONEY_TREE.get())).title(Component.translatable("itemGroup." + VerdantVibes.MOD_ID))
+            .icon(() -> new ItemStack(BlockInit.DRAGON_TREE.get())).title(Component.translatable("itemGroup." + VerdantVibes.MOD_ID))
             .displayItems((parameters, output) -> {
                 // Category
                 output.accept(BlockInit.GARDENING_TABLE.get());

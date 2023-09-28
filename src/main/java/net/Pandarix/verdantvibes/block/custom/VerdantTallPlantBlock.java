@@ -7,6 +7,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
@@ -54,6 +55,17 @@ public class VerdantTallPlantBlock extends DoublePlantBlock {
     public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
         Vec3 vec3 = pState.getOffset(pLevel, pPos);
         return voxelShape.move(vec3.x, vec3.y, vec3.z);
+    }
+
+    @Override
+    public void entityInside(BlockState pState, Level pLevel, BlockPos pPos, Entity pEntity) {
+        double d0 = Math.abs(pEntity.getDeltaMovement().y);
+        if (d0 < 0.1D && !pEntity.isSteppingCarefully()) {
+            double d1 = 0.4D + d0 * 0.8D;
+            pEntity.setDeltaMovement(pEntity.getDeltaMovement().multiply(d1, 1.0D, d1));
+        }
+
+        super.entityInside(pState, pLevel, pPos, pEntity);
     }
 
     public BlockState getStateForPlacement(BlockPlaceContext pContext) {
