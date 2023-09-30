@@ -1,7 +1,7 @@
 package net.Pandarix.verdantvibes.block.custom;
 
 import net.Pandarix.verdantvibes.VerdantVibes;
-import net.minecraft.advancements.Advancement;
+import net.minecraft.advancements.AdvancementHolder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
@@ -35,7 +35,7 @@ public class TurnableFlowerPotBlock extends FlowerPotBlock {
     public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
         if (pPlayer.isShiftKeyDown()) {
             if (pLevel.getServer() != null) {
-                Advancement advancement = pLevel.getServer().getAdvancements().getAdvancement(ADVANCEMENT_ID);
+                AdvancementHolder advancement = pLevel.getServer().getAdvancements().m_294099_(ADVANCEMENT_ID);
                 if (advancement != null) {
                     if (pPlayer instanceof ServerPlayer player) {
                         player.getAdvancements().award(advancement, "planted_pot");
