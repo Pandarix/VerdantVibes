@@ -1,6 +1,6 @@
 # VerdantVibes
 Minecraft Forge Mod. Enhances your builds and world with lush plants.
 
-![VerdantVibesPageDesignAltGIF_header](https://github.com/Pandarix/VerdantVibes/assets/98489042/7e26b4ae-a2f2-45cd-a043-b89f5da6106c)
-![ezgif com-optimize](https://github.com/Pandarix/VerdantVibes/assets/98489042/2c7a3965-c97a-457d-909d-1638f3ee141a)
-![VerdantVibesPageDesignAltGIF_2](https://github.com/Pandarix/VerdantVibes/assets/98489042/8fe98891-82a3-4350-8b97-8db08172b2a0)
+![Header](https://github.com/Pandarix/VerdantVibes/assets/98489042/afa48838-7165-4698-8662-c0f453ffae60)
+![Body](https://github.com/Pandarix/VerdantVibes/assets/98489042/20addb0a-6f76-4fe9-8e79-9bd8ce398574)
+![End](https://github.com/Pandarix/VerdantVibes/assets/98489042/6b6288d9-2534-448b-9a98-f65b9436dec0)
