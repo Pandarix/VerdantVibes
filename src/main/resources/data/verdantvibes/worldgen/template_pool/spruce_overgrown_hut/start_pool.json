@@ -1,4 +1,6 @@
 {
+  "name": "verdantvibes:spruce_overgrown_hut/start_pool",
+
   "fallback": "minecraft:empty",
 
   "elements": [

@@ -1,4 +1,6 @@
 {
+  "name": "verdantvibes:palm_campfire/start_pool",
+
   "fallback": "minecraft:empty",
 
   "elements": [

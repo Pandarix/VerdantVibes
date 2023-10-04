@@ -1,4 +1,6 @@
 {
+  "name": "verdantvibes:fairy_circle/start_pool",
+
   "fallback": "minecraft:empty",
 
   "elements": [

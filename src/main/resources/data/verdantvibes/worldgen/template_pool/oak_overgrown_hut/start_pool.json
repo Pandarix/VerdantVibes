@@ -1,4 +1,6 @@
 {
+  "name": "verdantvibes:oak_overgrown/start_pool",
+
   "fallback": "minecraft:empty",
 
   "elements": [

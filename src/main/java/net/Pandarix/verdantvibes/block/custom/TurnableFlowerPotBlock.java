@@ -53,7 +53,7 @@ public class TurnableFlowerPotBlock extends FlowerPotBlock {
     public void onPlace(BlockState pState, Level pLevel, BlockPos pPos, BlockState pOldState, boolean pMovedByPiston) {
         if (pOldState.getBlock() instanceof TurnableFlowerPotBlock || pOldState.getBlock() instanceof FlowerPotBlock) {
             if (pState.getBlock() != pOldState.getBlock()) {
-                pLevel.playSound(null, pPos, SoundEvents.CROP_PLANTED, SoundSource.BLOCKS);
+                pLevel.playSound(null, pPos, SoundEvents.CROP_PLANTED, SoundSource.BLOCKS, 0.5f, 1f);
             }
         }
         super.onPlace(pState, pLevel, pPos, pOldState, pMovedByPiston);

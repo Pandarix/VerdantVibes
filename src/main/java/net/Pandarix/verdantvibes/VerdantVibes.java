@@ -2,6 +2,8 @@ package net.Pandarix.verdantvibes;
 
 import com.mojang.logging.LogUtils;
 import net.Pandarix.verdantvibes.init.*;
+import net.Pandarix.verdantvibes.woldgen.ModConfiguredFeatures;
+import net.Pandarix.verdantvibes.woldgen.ModPlacedFeatures;
 import net.Pandarix.verdantvibes.woldgen.VillageBuildings;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
@@ -40,8 +42,9 @@ public class VerdantVibes
         BlockInit.BLOCKS.register(modEventBus);
         // Register the Deferred Register to the mod event bus so items get registered
         ItemInit.ITEMS.register(modEventBus);
-        // Register the Deferred Register to the mod event bus so tabs get registered
-        ItemGroupInit.CREATIVE_MODE_TABS.register(modEventBus);
+
+        ModConfiguredFeatures.CONFIGURED_FEATURES.register(modEventBus);
+        ModPlacedFeatures.PLACED_FEATURES.register(modEventBus);
 
         TreeDecoratorInit.DECORATORS.register(modEventBus);
 

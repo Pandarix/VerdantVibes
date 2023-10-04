@@ -10,7 +10,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -30,7 +30,7 @@ public class BlockInit {
 
     // -----------Plants
     public static final RegistryObject<Block> MONSTERA = registerBlock("monstera",
-            () -> new VerdantPlantBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.CHERRY_SAPLING).offsetType(BlockBehaviour.OffsetType.XZ).ignitedByLava().pushReaction(PushReaction.DESTROY), List.of(), Block.box(3, 0, 3, 13, 15, 13)));
+            () -> new VerdantPlantBlock(BlockBehaviour.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.AZALEA).offsetType(BlockBehaviour.OffsetType.XZ), List.of(), Block.box(3, 0, 3, 13, 15, 13)));
 
     public static final RegistryObject<Block> SNAKE_PLANT = registerBlock("snake_plant",
             () -> new VerdantPlantBlock(BlockBehaviour.Properties.copy(MONSTERA.get()), List.of(Blocks.SAND, Blocks.RED_SAND), Block.box(2, 0, 2, 14, 16, 14)));
@@ -51,28 +51,28 @@ public class BlockInit {
             () -> new VerdantGrowablePlantBlock(BlockBehaviour.Properties.copy(TALL_DRAGON_TREE.get()), List.of(Blocks.SAND), Block.box(2, 0, 3, 13, 23, 13), (VerdantTallPlantBlock) TALL_DRAGON_TREE.get()));
 
     public static final RegistryObject<Block> CANDY_TUFT = registerBlock("candy_tuft",
-            () -> new VerdantPetalPlantBlock(BlockBehaviour.Properties.copy(Blocks.PINK_PETALS), List.of(Blocks.GRAVEL, Blocks.COARSE_DIRT), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 3.0D, 16.0D)));
+            () -> new VerdantPetalPlantBlock(BlockBehaviour.Properties.of(Material.PLANT).noCollission().sound(SoundType.FLOWERING_AZALEA), List.of(Blocks.GRAVEL, Blocks.COARSE_DIRT), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 3.0D, 16.0D)));
 
     public static final RegistryObject<Block> PERIWINKLE = registerBlock("periwinkle",
-            () -> new VerdantPetalPlantBlock(BlockBehaviour.Properties.copy(Blocks.PINK_PETALS), List.of(), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 3.0D, 16.0D)));
+            () -> new VerdantPetalPlantBlock(BlockBehaviour.Properties.copy(CANDY_TUFT.get()), List.of(), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 3.0D, 16.0D)));
 
     public static final RegistryObject<Block> IVY = registerBlock("ivy",
             () -> new VerdantVineBlock(BlockBehaviour.Properties.copy(Blocks.VINE)));
 
     // -----------Potted
-    public static final RegistryObject<Block> POTTED_MONSTERA = registerBlock("potted_monstera", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), MONSTERA, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
+    public static final RegistryObject<Block> POTTED_MONSTERA = registerBlockWithoutItem("potted_monstera", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), MONSTERA, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
 
-    public static final RegistryObject<Block> POTTED_SNAKE_PLANT = registerBlock("potted_snake_plant", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), SNAKE_PLANT, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
+    public static final RegistryObject<Block> POTTED_SNAKE_PLANT = registerBlockWithoutItem("potted_snake_plant", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), SNAKE_PLANT, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
 
-    public static final RegistryObject<Block> POTTED_PARLOUR_PALM = registerBlock("potted_parlour_palm", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), PARLOUR_PALM, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
+    public static final RegistryObject<Block> POTTED_PARLOUR_PALM = registerBlockWithoutItem("potted_parlour_palm", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), PARLOUR_PALM, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
 
-    public static final RegistryObject<Block> POTTED_MONEY_TREE = registerBlock("potted_money_tree", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), MONEY_TREE, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
+    public static final RegistryObject<Block> POTTED_MONEY_TREE = registerBlockWithoutItem("potted_money_tree", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), MONEY_TREE, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
 
-    public static final RegistryObject<Block> POTTED_DRAGON_TREE = registerBlock("potted_dragon_tree", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), DRAGON_TREE, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
+    public static final RegistryObject<Block> POTTED_DRAGON_TREE = registerBlockWithoutItem("potted_dragon_tree", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), DRAGON_TREE, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
 
-    public static final RegistryObject<Block> POTTED_LOBELIA = registerBlock("potted_lobelia", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), MONEY_TREE, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
+    public static final RegistryObject<Block> POTTED_LOBELIA = registerBlockWithoutItem("potted_lobelia", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), MONEY_TREE, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
 
-    public static final RegistryObject<Block> POTTED_IVY = registerBlock("potted_ivy", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), IVY, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
+    public static final RegistryObject<Block> POTTED_IVY = registerBlockWithoutItem("potted_ivy", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), IVY, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
 
     // -----------REGISTRATION--------------------------------------------------------------------------//
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
@@ -86,7 +86,7 @@ public class BlockInit {
     }
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
-        return ItemInit.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+        return ItemInit.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(ItemGroupInit.BEAUTIFY_TAB)));
     }
 
     private static <T extends Block> RegistryObject<T> registerWaterPlaceableBlock(String name, Supplier<T> block) {
@@ -96,6 +96,6 @@ public class BlockInit {
     }
 
     private static <T extends Block> RegistryObject<Item> registerWaterPlaceableBlockItem(String name, RegistryObject<T> block) {
-        return ItemInit.ITEMS.register(name, () -> new PlaceOnWaterBlockItem(block.get(), new Item.Properties()));
+        return ItemInit.ITEMS.register(name, () -> new PlaceOnWaterBlockItem(block.get(), new Item.Properties().tab(ItemGroupInit.BEAUTIFY_TAB)));
     }
 }
