@@ -1,5 +1,5 @@
 # VerdantVibes
-![license](https://img.shields.io/github/license/Pandarix/VerdantVibes.svg) ![issues](https://img.shields.io/github/issues/Pandarix/VerdantVibes.svg) ![follow](https://img.shields.io/github/followers/Pandarix.svg?style=social&label=Follow&maxAge=2592000)
+![license](https://img.shields.io/github/license/Pandarix/VerdantVibes.svg) ![issues](https://img.shields.io/github/issues/Pandarix/VerdantVibes.svg) [![follow](https://img.shields.io/github/followers/Pandarix.svg?style=social&label=Follow&maxAge=2592000)](https://github.com/Pandarix)
 
 Minecraft Forge Mod. Enhances your builds and world with lush plants.
 
