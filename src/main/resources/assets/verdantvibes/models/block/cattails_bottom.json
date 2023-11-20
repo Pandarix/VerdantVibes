@@ -1,0 +1,8 @@
+{
+	"parent": "verdantvibes:block/cattails",
+	"ambientocclusion": false,
+	"render_type": "cutout",
+	"textures": {
+		"1": "verdantvibes:block/cattails_bottom"
+	}
+}
