@@ -8,15 +8,18 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.LiquidBlockContainer;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
+import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -25,7 +28,7 @@ import net.minecraftforge.common.PlantType;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class VerdantTallWaterPlantBlock extends VerdantTallPlantBlock implements SimpleWaterloggedBlock {
+public class VerdantTallWaterPlantBlock extends VerdantTallPlantBlock implements LiquidBlockContainer {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
     public VerdantTallWaterPlantBlock(Properties pProperties, List<Block> mayPlaceOn, VoxelShape pVoxelShape) {
@@ -56,6 +59,15 @@ public class VerdantTallWaterPlantBlock extends VerdantTallPlantBlock implements
     public BlockState getStateForPlacement(BlockPlaceContext pContext) {
         FluidState fluidstate = pContext.getLevel().getFluidState(pContext.getClickedPos());
         return this.defaultBlockState().setValue(WATERLOGGED, Boolean.valueOf(fluidstate.isSourceOfType(Fluids.WATER))).setValue(FACING, pContext.getHorizontalDirection().getOpposite());
+    }
+
+    public BlockState updateShape(BlockState pState, Direction pFacing, BlockState pFacingState, LevelAccessor pLevel, BlockPos blockPos, BlockPos pFacingPos) {
+        BlockState blockstate = super.updateShape(pState, pFacing, pFacingState, pLevel, blockPos, pFacingPos);
+        if (!blockstate.isAir()) {
+            pLevel.scheduleTick(blockPos, Fluids.WATER, Fluids.WATER.getTickDelay(pLevel));
+        }
+
+        return blockstate;
     }
 
     public FluidState getFluidState(BlockState pState) {
@@ -89,5 +101,15 @@ public class VerdantTallWaterPlantBlock extends VerdantTallPlantBlock implements
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
         super.createBlockStateDefinition(pBuilder);
         pBuilder.add(WATERLOGGED);
+    }
+
+    @Override
+    public boolean canPlaceLiquid(BlockGetter pLevel, BlockPos pPos, BlockState pState, Fluid pFluid) {
+        return false;
+    }
+
+    @Override
+    public boolean placeLiquid(LevelAccessor pLevel, BlockPos pPos, BlockState pState, FluidState pFluidState) {
+        return false;
     }
 }
