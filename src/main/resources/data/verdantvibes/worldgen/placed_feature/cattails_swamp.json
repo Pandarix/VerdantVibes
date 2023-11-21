@@ -2,20 +2,8 @@
   "feature": "verdantvibes:cattails_swamp",
   "placement": [
     {
-      "type": "minecraft:count",
-      "count": {
-        "type": "minecraft:weighted_list",
-        "distribution": [
-          {
-            "weight": 2,
-            "data": 4
-          },
-          {
-            "weight": 12,
-            "data": 0
-          }
-        ]
-      }
+      "type": "minecraft:rarity_filter",
+      "chance": 14
     },
     {
       "type": "minecraft:in_square"
