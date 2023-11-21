@@ -30,6 +30,9 @@
   "block.verdantvibes.potted_ivy": "Potted Ivy",
   "block.verdantvibes.cattails": "Cattails",
   "block.verdantvibes.ivy.info": "Typha latifolia",
+  "block.verdantvibes.burnweed": "Burnweed",
+  "block.verdantvibes.burnweed.info": "Erechtites hieracifolia",
+  "block.verdantvibes.potted_burnweed": "Potted Burnweed",
 
   "entity.minecraft.villager.verdantvibes.gardener": "Gardener",
 

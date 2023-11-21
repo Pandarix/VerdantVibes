@@ -2,10 +2,14 @@ package net.Pandarix.verdantvibes;
 
 import com.mojang.logging.LogUtils;
 import net.Pandarix.verdantvibes.init.*;
+import net.Pandarix.verdantvibes.particles.BurnweedParticles;
+import net.Pandarix.verdantvibes.particles.ParticleInit;
 import net.Pandarix.verdantvibes.woldgen.VillageBuildings;
+import net.minecraft.client.Minecraft;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -44,6 +48,7 @@ public class VerdantVibes
         ItemGroupInit.CREATIVE_MODE_TABS.register(modEventBus);
 
         TreeDecoratorInit.DECORATORS.register(modEventBus);
+        ParticleInit.PARTICLE_TYPES.register(modEventBus);
 
         VillagerInit.register(modEventBus);
 
@@ -66,6 +71,7 @@ public class VerdantVibes
         ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ForgeRegistries.BLOCKS.getKey(BlockInit.LOBELIA.get()), BlockInit.POTTED_LOBELIA);
         ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ForgeRegistries.BLOCKS.getKey(BlockInit.DRAGON_TREE.get()), BlockInit.POTTED_DRAGON_TREE);
         ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ForgeRegistries.BLOCKS.getKey(BlockInit.IVY.get()), BlockInit.POTTED_IVY);
+        ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ForgeRegistries.BLOCKS.getKey(BlockInit.BURNWEED.get()), BlockInit.POTTED_BURNWEED);
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

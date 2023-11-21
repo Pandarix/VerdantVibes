@@ -1,0 +1,142 @@
+{
+  "variants": {
+    "facing=east,half=upper,size=0": [
+      {
+        "model": "verdantvibes:block/burnweed_top_0",
+        "y": 90
+      }
+    ],
+    "facing=north,half=upper,size=0": [
+      {
+        "model": "verdantvibes:block/burnweed_top_0"
+      }
+    ],
+    "facing=south,half=upper,size=0": [
+      {
+        "model": "verdantvibes:block/burnweed_top_0",
+        "y": 180
+      }
+    ],
+    "facing=west,half=upper,size=0": [
+      {
+        "model": "verdantvibes:block/burnweed_top_0",
+        "y": 270
+      }
+    ],
+    "facing=east,half=lower,size=0": [
+      {
+        "model": "verdantvibes:block/burnweed_bottom_0",
+        "y": 90
+      }
+    ],
+    "facing=north,half=lower,size=0": [
+      {
+        "model": "verdantvibes:block/burnweed_bottom_0"
+      }
+    ],
+    "facing=south,half=lower,size=0": [
+      {
+        "model": "verdantvibes:block/burnweed_bottom_0",
+        "y": 180
+      }
+    ],
+    "facing=west,half=lower,size=0": [
+      {
+        "model": "verdantvibes:block/burnweed_bottom_0",
+        "y": 270
+      }
+    ],
+    "facing=east,half=upper,size=1": [
+      {
+        "model": "verdantvibes:block/burnweed_top_1",
+        "y": 90
+      }
+    ],
+    "facing=north,half=upper,size=1": [
+      {
+        "model": "verdantvibes:block/burnweed_top_1"
+      }
+    ],
+    "facing=south,half=upper,size=1": [
+      {
+        "model": "verdantvibes:block/burnweed_top_1",
+        "y": 180
+      }
+    ],
+    "facing=west,half=upper,size=1": [
+      {
+        "model": "verdantvibes:block/burnweed_top_1",
+        "y": 270
+      }
+    ],
+    "facing=east,half=lower,size=1": [
+      {
+        "model": "verdantvibes:block/burnweed_bottom_1",
+        "y": 90
+      }
+    ],
+    "facing=north,half=lower,size=1": [
+      {
+        "model": "verdantvibes:block/burnweed_bottom_1"
+      }
+    ],
+    "facing=south,half=lower,size=1": [
+      {
+        "model": "verdantvibes:block/burnweed_bottom_1",
+        "y": 180
+      }
+    ],
+    "facing=west,half=lower,size=1": [
+      {
+        "model": "verdantvibes:block/burnweed_bottom_1",
+        "y": 270
+      }
+    ],
+    "facing=east,half=upper,size=2": [
+      {
+        "model": "verdantvibes:block/burnweed_top_2",
+        "y": 90
+      }
+    ],
+    "facing=north,half=upper,size=2": [
+      {
+        "model": "verdantvibes:block/burnweed_top_2"
+      }
+    ],
+    "facing=south,half=upper,size=2": [
+      {
+        "model": "verdantvibes:block/burnweed_top_2",
+        "y": 180
+      }
+    ],
+    "facing=west,half=upper,size=2": [
+      {
+        "model": "verdantvibes:block/burnweed_top_2",
+        "y": 270
+      }
+    ],
+    "facing=east,half=lower,size=2": [
+      {
+        "model": "verdantvibes:block/burnweed_bottom_2",
+        "y": 90
+      }
+    ],
+    "facing=north,half=lower,size=2": [
+      {
+        "model": "verdantvibes:block/burnweed_bottom_2"
+      }
+    ],
+    "facing=south,half=lower,size=2": [
+      {
+        "model": "verdantvibes:block/burnweed_bottom_2",
+        "y": 180
+      }
+    ],
+    "facing=west,half=lower,size=2": [
+      {
+        "model": "verdantvibes:block/burnweed_bottom_2",
+        "y": 270
+      }
+    ]
+  }
+}

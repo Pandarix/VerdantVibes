@@ -60,7 +60,10 @@ public class BlockInit {
             () -> new VerdantVineBlock(BlockBehaviour.Properties.copy(Blocks.VINE)));
 
     public static final RegistryObject<Block> CATTAILS = registerBlock("cattails",
-            () -> new VerdantTallWaterPlantBlock(BlockBehaviour.Properties.copy(Blocks.TALL_GRASS), List.of(Blocks.MUD, Blocks.GRAVEL, Blocks.COARSE_DIRT, Blocks.SAND), Block.box(2, 0, 3, 13, 16, 13)));
+            () -> new VerdantTallWaterPlantBlock(BlockBehaviour.Properties.copy(Blocks.TALL_GRASS).offsetType(BlockBehaviour.OffsetType.XYZ), List.of(Blocks.MUD, Blocks.GRAVEL, Blocks.COARSE_DIRT, Blocks.SAND), Block.box(2, 0, 3, 13, 16, 13)));
+
+    public static final RegistryObject<Block> BURNWEED = registerBlock("burnweed",
+            () -> new BurnweedBlock(BlockBehaviour.Properties.copy(Blocks.TALL_GRASS).offsetType(BlockBehaviour.OffsetType.XYZ), List.of(), Block.box(2, 0, 2, 14, 16, 14)));
 
     // -----------Potted
     public static final RegistryObject<Block> POTTED_MONSTERA = registerBlock("potted_monstera", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), MONSTERA, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
@@ -76,6 +79,8 @@ public class BlockInit {
     public static final RegistryObject<Block> POTTED_LOBELIA = registerBlock("potted_lobelia", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), MONEY_TREE, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
 
     public static final RegistryObject<Block> POTTED_IVY = registerBlock("potted_ivy", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), IVY, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
+
+    public static final RegistryObject<Block> POTTED_BURNWEED = registerBlock("potted_burnweed", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), BURNWEED, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
 
     // -----------REGISTRATION--------------------------------------------------------------------------//
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

@@ -32,7 +32,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class VerdantTallPlantBlock extends DoublePlantBlock {
-    private final VoxelShape voxelShape;
+    protected final VoxelShape voxelShape;
     protected final List<Block> mayPlaceOn;
 
     public VerdantTallPlantBlock(Properties pProperties, List<Block> mayPlaceOn, VoxelShape pVoxelShape) {
@@ -57,7 +57,7 @@ public class VerdantTallPlantBlock extends DoublePlantBlock {
     public void entityInside(BlockState pState, Level pLevel, BlockPos pPos, Entity pEntity) {
         double d0 = Math.abs(pEntity.getDeltaMovement().y);
         if (d0 < 0.1D && !pEntity.isSteppingCarefully()) {
-            double d1 = 0.4D + d0 * 0.8D;
+            double d1 = 0.4D + d0 * 1.5D;
             pEntity.setDeltaMovement(pEntity.getDeltaMovement().multiply(d1, 1.0D, d1));
         }
 

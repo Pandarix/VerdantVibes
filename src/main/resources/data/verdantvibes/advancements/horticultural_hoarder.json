@@ -120,6 +120,18 @@
           }
         ]
       }
+    },
+    "find_burnweed": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "verdantvibes:burnweed"
+            ]
+          }
+        ]
+      }
     }
   },
   "display": {
@@ -167,6 +179,9 @@
     ],
     [
       "find_candy_tuft"
+    ],
+    [
+      "find_burnweed"
     ]
   ],
   "sends_telemetry_event": true
