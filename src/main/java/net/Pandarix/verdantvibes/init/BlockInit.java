@@ -38,7 +38,7 @@ public class BlockInit {
     public static final RegistryObject<Block> PARLOUR_PALM = registerBlock("parlour_palm",
             () -> new VerdantPlantBlock(BlockBehaviour.Properties.copy(MONSTERA.get()), List.of(Blocks.SAND), Block.box(2, 0, 2, 14, 22, 14)));
 
-    public static final RegistryObject<Block> MONEY_TREE = registerWaterPlaceableBlock("money_tree",
+    public static final RegistryObject<Block> MONEY_TREE = registerBlock("money_tree",
             () -> new VerdantPlantBlock(BlockBehaviour.Properties.copy(MONSTERA.get()), List.of(Blocks.MUD), Block.box(3, 0, 3, 13, 10, 13)));
 
     public static final RegistryObject<Block> LOBELIA = registerBlock("lobelia",
@@ -58,6 +58,9 @@ public class BlockInit {
 
     public static final RegistryObject<Block> IVY = registerBlock("ivy",
             () -> new VerdantVineBlock(BlockBehaviour.Properties.copy(Blocks.VINE)));
+
+    public static final RegistryObject<Block> CATTAILS = registerBlock("cattails",
+            () -> new VerdantTallWaterPlantBlock(BlockBehaviour.Properties.copy(Blocks.TALL_GRASS), List.of(Blocks.MUD, Blocks.GRAVEL, Blocks.COARSE_DIRT, Blocks.SAND), Block.box(2, 0, 3, 13, 16, 13)));
 
     // -----------Potted
     public static final RegistryObject<Block> POTTED_MONSTERA = registerBlock("potted_monstera", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), MONSTERA, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
@@ -87,15 +90,5 @@ public class BlockInit {
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
         return ItemInit.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
-    }
-
-    private static <T extends Block> RegistryObject<T> registerWaterPlaceableBlock(String name, Supplier<T> block) {
-        RegistryObject<T> toReturn = BLOCKS.register(name, block);
-        registerWaterPlaceableBlockItem(name, toReturn);
-        return toReturn;
-    }
-
-    private static <T extends Block> RegistryObject<Item> registerWaterPlaceableBlockItem(String name, RegistryObject<T> block) {
-        return ItemInit.ITEMS.register(name, () -> new PlaceOnWaterBlockItem(block.get(), new Item.Properties()));
     }
 }

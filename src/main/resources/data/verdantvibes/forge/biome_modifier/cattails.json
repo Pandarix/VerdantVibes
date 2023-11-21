@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "features": "verdantvibes:cattails",
+  "biomes": "#minecraft:is_river",
+  "step": "vegetal_decoration"
+}

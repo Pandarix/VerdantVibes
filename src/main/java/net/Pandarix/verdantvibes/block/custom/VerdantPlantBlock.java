@@ -1,5 +1,6 @@
 package net.Pandarix.verdantvibes.block.custom;
 
+import net.Pandarix.verdantvibes.VerdantVibes;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -23,6 +24,7 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.common.IPlantable;
+import net.minecraftforge.common.data.ForgeBlockTagsProvider;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.Nullable;
 
@@ -41,13 +43,7 @@ public class VerdantPlantBlock extends BushBlock implements BonemealableBlock {
 
     @Override
     protected boolean mayPlaceOn(BlockState pState, BlockGetter pLevel, BlockPos pPos) {
-        if (mayPlaceOn.contains(pState.getBlock())) {
-            if(pState.is(Blocks.WATER)){
-                return !pLevel.getBlockState(pPos.below()).is(Blocks.WATER);
-            }
-            return true;
-        }
-        return super.mayPlaceOn(pState, pLevel, pPos);
+        return mayPlaceOn.contains(pState.getBlock()) || super.mayPlaceOn(pState, pLevel, pPos);
     }
     @Override
     public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {

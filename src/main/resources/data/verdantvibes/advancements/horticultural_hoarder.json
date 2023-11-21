@@ -84,6 +84,42 @@
           }
         ]
       }
+    },
+    "find_candy_tuft": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "verdantvibes:candy_tuft"
+            ]
+          }
+        ]
+      }
+    },
+    "find_periwinkle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "verdantvibes:periwinkle"
+            ]
+          }
+        ]
+      }
+    },
+    "find_cattails": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "verdantvibes:cattails"
+            ]
+          }
+        ]
+      }
     }
   },
   "display": {
@@ -122,6 +158,15 @@
     ],
     [
       "find_ivy"
+    ],
+    [
+      "find_cattails"
+    ],
+    [
+      "find_periwinkle"
+    ],
+    [
+      "find_candy_tuft"
     ]
   ],
   "sends_telemetry_event": true

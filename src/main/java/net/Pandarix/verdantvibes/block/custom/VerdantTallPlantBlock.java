@@ -6,6 +6,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
@@ -20,6 +21,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
@@ -31,24 +33,18 @@ import java.util.List;
 
 public class VerdantTallPlantBlock extends DoublePlantBlock {
     private final VoxelShape voxelShape;
-    private final List<Block> mayPlaceOn;
+    protected final List<Block> mayPlaceOn;
 
     public VerdantTallPlantBlock(Properties pProperties, List<Block> mayPlaceOn, VoxelShape pVoxelShape) {
         super(pProperties);
         this.mayPlaceOn = mayPlaceOn;
         this.voxelShape = pVoxelShape;
-        this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
+        this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(HALF, DoubleBlockHalf.LOWER));
     }
 
     @Override
     protected boolean mayPlaceOn(BlockState pState, BlockGetter pLevel, BlockPos pPos) {
-        if (mayPlaceOn.contains(pState.getBlock())) {
-            if(pState.is(Blocks.WATER)){
-                return !pLevel.getBlockState(pPos.below()).is(Blocks.WATER);
-            }
-            return true;
-        }
-        return super.mayPlaceOn(pState, pLevel, pPos);
+        return mayPlaceOn.contains(pState.getBlock()) || pState.is(BlockTags.DIRT) || pState.is(Blocks.FARMLAND);
     }
 
     @Override

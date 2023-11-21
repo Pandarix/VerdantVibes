@@ -1,48 +1,16 @@
 {
   "variants": {
-    "facing=east,half=upper": [
-      {
-        "model": "verdantvibes:block/cattails_top",
-        "y": 90
-      }
-    ],
-    "facing=north,half=upper": [
+    "half=upper": [
       {
         "model": "verdantvibes:block/cattails_top"
+      },
+      {
+        "model": "verdantvibes:block/cattails_taller"
       }
     ],
-    "facing=south,half=upper": [
+    "half=lower": [
       {
-        "model": "verdantvibes:block/cattails_top",
-        "y": 180
-      }
-    ],
-    "facing=west,half=upper": [
-      {
-        "model": "verdantvibes:block/cattails_top",
-        "y": 270
-      }
-    ],    "facing=east,half=lower": [
-      {
-        "model": "verdantvibes:block/cattails_top",
-        "y": 90
-      }
-    ],
-    "facing=north,half=lower": [
-      {
-        "model": "verdantvibes:block/cattails_top"
-      }
-    ],
-    "facing=south,half=lower": [
-      {
-        "model": "verdantvibes:block/cattails_top",
-        "y": 180
-      }
-    ],
-    "facing=west,half=lower": [
-      {
-        "model": "verdantvibes:block/cattails_top",
-        "y": 270
+        "model": "verdantvibes:block/cattails_bottom"
       }
     ]
   }

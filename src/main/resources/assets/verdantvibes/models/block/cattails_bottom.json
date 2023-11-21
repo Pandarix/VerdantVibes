@@ -3,6 +3,8 @@
 	"ambientocclusion": false,
 	"render_type": "cutout",
 	"textures": {
-		"1": "verdantvibes:block/cattails_bottom"
+		"tint": "verdantvibes:block/cattails_bottom_tint",
+		"no_tint": "verdantvibes:block/cattails_bottom_no_tint",
+		"particle": "verdantvibes:block/cattails_bottom_tint"
 	}
 }

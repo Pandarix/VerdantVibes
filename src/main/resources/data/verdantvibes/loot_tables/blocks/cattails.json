@@ -8,7 +8,7 @@
           "children": [
             {
               "type": "minecraft:item",
-              "name": "verdantvibes:ivy",
+              "name": "verdantvibes:cattails",
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",
@@ -20,7 +20,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "verdantvibes:ivy",
+              "name": "verdantvibes:cattails",
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",
