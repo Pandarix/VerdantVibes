@@ -1,0 +1,177 @@
+{
+  "variants": {
+    "facing=east": [
+      {
+        "model": "verdantvibes:block/bracket_mushroom",
+        "y": 90
+      },
+      {
+        "model": "verdantvibes:block/bracket_mushroom_1",
+        "y": 90
+      },
+      {
+        "model": "verdantvibes:block/bracket_mushroom_2",
+        "y": 90
+      },
+      {
+        "model": "verdantvibes:block/bracket_mushroom_3",
+        "y": 90
+      },
+      {
+        "model": "verdantvibes:block/bracket_mushroom_4",
+        "y": 90
+      },
+      {
+        "model": "verdantvibes:block/bracket_mushroom_5",
+        "y": 90
+      },
+      {
+        "model": "verdantvibes:block/bracket_mushroom_6",
+        "y": 90
+      },
+      {
+        "model": "verdantvibes:block/bracket_mushroom_7",
+        "y": 90
+      },
+      {
+        "model": "verdantvibes:block/bracket_mushroom_8",
+        "y": 90
+      },
+      {
+        "model": "verdantvibes:block/bracket_mushroom_9",
+        "y": 90
+      },
+      {
+        "model": "verdantvibes:block/bracket_mushroom_10",
+        "y": 90
+      }
+    ],
+    "facing=north": [
+      {
+        "model": "verdantvibes:block/bracket_mushroom"
+      },
+      {
+        "model": "verdantvibes:block/bracket_mushroom_1"
+      },
+      {
+        "model": "verdantvibes:block/bracket_mushroom_2"
+      },
+      {
+        "model": "verdantvibes:block/bracket_mushroom_3"
+      },
+      {
+        "model": "verdantvibes:block/bracket_mushroom_4"
+      },
+      {
+        "model": "verdantvibes:block/bracket_mushroom_5"
+      },
+      {
+        "model": "verdantvibes:block/bracket_mushroom_6"
+      },
+      {
+        "model": "verdantvibes:block/bracket_mushroom_7"
+      },
+      {
+        "model": "verdantvibes:block/bracket_mushroom_8"
+      },
+      {
+        "model": "verdantvibes:block/bracket_mushroom_9"
+      },
+      {
+        "model": "verdantvibes:block/bracket_mushroom_10"
+      }
+    ],
+    "facing=south": [
+      {
+        "model": "verdantvibes:block/bracket_mushroom",
+        "y": 180
+      },
+      {
+        "model": "verdantvibes:block/bracket_mushroom_1",
+        "y": 180
+      },
+      {
+        "model": "verdantvibes:block/bracket_mushroom_2",
+        "y": 180
+      },
+      {
+        "model": "verdantvibes:block/bracket_mushroom_3",
+        "y": 180
+      },
+      {
+        "model": "verdantvibes:block/bracket_mushroom_4",
+        "y": 180
+      },
+      {
+        "model": "verdantvibes:block/bracket_mushroom_5",
+        "y": 180
+      },
+      {
+        "model": "verdantvibes:block/bracket_mushroom_6",
+        "y": 180
+      },
+      {
+        "model": "verdantvibes:block/bracket_mushroom_7",
+        "y": 180
+      },
+      {
+        "model": "verdantvibes:block/bracket_mushroom_8",
+        "y": 180
+      },
+      {
+        "model": "verdantvibes:block/bracket_mushroom_9",
+        "y": 180
+      },
+      {
+        "model": "verdantvibes:block/bracket_mushroom_10",
+        "y": 180
+      }
+    ],
+    "facing=west": [
+      {
+        "model": "verdantvibes:block/bracket_mushroom",
+        "y": 270
+      },
+      {
+        "model": "verdantvibes:block/bracket_mushroom_1",
+        "y": 270
+      },
+      {
+        "model": "verdantvibes:block/bracket_mushroom_2",
+        "y": 270
+      },
+      {
+        "model": "verdantvibes:block/bracket_mushroom_3",
+        "y": 270
+      },
+      {
+        "model": "verdantvibes:block/bracket_mushroom_4",
+        "y": 270
+      },
+      {
+        "model": "verdantvibes:block/bracket_mushroom_5",
+        "y": 270
+      },
+      {
+        "model": "verdantvibes:block/bracket_mushroom_6",
+        "y": 270
+      },
+      {
+        "model": "verdantvibes:block/bracket_mushroom_7",
+        "y": 270
+      },
+      {
+        "model": "verdantvibes:block/bracket_mushroom_8",
+        "y": 270
+      },
+      {
+        "model": "verdantvibes:block/bracket_mushroom_9",
+        "y": 270
+      },
+      {
+        "model": "verdantvibes:block/bracket_mushroom_10",
+        "y": 270
+      }
+    ]
+  }
+}

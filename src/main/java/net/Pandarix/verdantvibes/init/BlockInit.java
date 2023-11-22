@@ -65,6 +65,9 @@ public class BlockInit {
     public static final RegistryObject<Block> BURNWEED = registerBlock("burnweed",
             () -> new BurnweedBlock(BlockBehaviour.Properties.copy(Blocks.TALL_GRASS).offsetType(BlockBehaviour.OffsetType.XYZ), List.of(), Block.box(2, 0, 2, 14, 16, 14)));
 
+    public static final RegistryObject<Block> BRACKET_MUSHROOM = registerBlock("bracket_mushroom",
+            () -> new BracketMushroomBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).noCollission().instabreak().sound(SoundType.GRASS)));
+
     // -----------Potted
     public static final RegistryObject<Block> POTTED_MONSTERA = registerBlock("potted_monstera", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), MONSTERA, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
 
@@ -76,7 +79,7 @@ public class BlockInit {
 
     public static final RegistryObject<Block> POTTED_DRAGON_TREE = registerBlock("potted_dragon_tree", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), DRAGON_TREE, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
 
-    public static final RegistryObject<Block> POTTED_LOBELIA = registerBlock("potted_lobelia", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), MONEY_TREE, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
+    public static final RegistryObject<Block> POTTED_LOBELIA = registerBlock("potted_lobelia", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), LOBELIA, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
 
     public static final RegistryObject<Block> POTTED_IVY = registerBlock("potted_ivy", () -> new TurnableFlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), IVY, BlockBehaviour.Properties.copy(Blocks.POTTED_CORNFLOWER)));
 

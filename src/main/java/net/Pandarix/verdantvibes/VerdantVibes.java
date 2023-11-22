@@ -5,6 +5,7 @@ import net.Pandarix.verdantvibes.init.*;
 import net.Pandarix.verdantvibes.particles.BurnweedParticles;
 import net.Pandarix.verdantvibes.particles.ParticleInit;
 import net.Pandarix.verdantvibes.woldgen.VillageBuildings;
+import net.Pandarix.verdantvibes.woldgen.tree.trunkplacer.ModTrunkPlacerTypes;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
@@ -47,6 +48,7 @@ public class VerdantVibes
         // Register the Deferred Register to the mod event bus so tabs get registered
         ItemGroupInit.CREATIVE_MODE_TABS.register(modEventBus);
 
+        ModTrunkPlacerTypes.TRUNK_PLACER.register(modEventBus);
         TreeDecoratorInit.DECORATORS.register(modEventBus);
         ParticleInit.PARTICLE_TYPES.register(modEventBus);
 

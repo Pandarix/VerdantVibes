@@ -3,6 +3,7 @@ package net.Pandarix.verdantvibes.init;
 import com.mojang.serialization.Codec;
 import net.Pandarix.verdantvibes.VerdantVibes;
 import net.Pandarix.verdantvibes.woldgen.tree.decorator.TrunkIvyDecorator;
+import net.Pandarix.verdantvibes.woldgen.tree.decorator.TrunkMushroomDecorator;
 import net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator;
 import net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecoratorType;
 import net.minecraftforge.registries.DeferredRegister;
@@ -12,6 +13,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class TreeDecoratorInit<P extends TreeDecorator> {
     public static final DeferredRegister<TreeDecoratorType<?>> DECORATORS = DeferredRegister.create(ForgeRegistries.TREE_DECORATOR_TYPES, VerdantVibes.MOD_ID);
     public static final RegistryObject<TreeDecoratorType<TrunkIvyDecorator>> TRUNK_IVY = register("trunk_ivy", TrunkIvyDecorator.CODEC);
+    public static final RegistryObject<TreeDecoratorType<TrunkMushroomDecorator>> TRUNK_MUSHROOM = register("trunk_mushroom", TrunkMushroomDecorator.CODEC);
     private final Codec<P> codec;
 
     private static <P extends TreeDecorator> RegistryObject<TreeDecoratorType<P>> register(String name, Codec<P> pCodec) {

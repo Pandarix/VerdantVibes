@@ -20,15 +20,27 @@ import java.util.List;
 public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> BIRCH_IVY_PLACED_KEY = createKey("birch_ivy_placed");
     public static final ResourceKey<PlacedFeature> OAK_IVY_PLACED_KEY = createKey("oak_ivy_placed");
+    public static final ResourceKey<PlacedFeature> SPRUCE_MUSHROOM_PLACED_KEY = createKey("spruce_mushroom_placed");
+    public static final ResourceKey<PlacedFeature> LYING_BIRCH_MUSHROOM_PlACED_KEY = createKey("lying_birch_mushroom_placed");
+    public static final ResourceKey<PlacedFeature> LYING_SPRUCE_MUSHROOM_PlACED_KEY = createKey("lying_spruce_mushroom_placed");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         register(context, BIRCH_IVY_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BIRCH_IVY_KEY),
-                VegetationPlacements.treePlacement(RarityFilter.onAverageOnceEvery(4), Blocks.BIRCH_SAPLING));
+                VegetationPlacements.treePlacement(RarityFilter.onAverageOnceEvery(2), Blocks.BIRCH_SAPLING));
 
         register(context, OAK_IVY_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OAK_IVY_KEY),
-                VegetationPlacements.treePlacement(RarityFilter.onAverageOnceEvery(4), Blocks.OAK_SAPLING));
+                VegetationPlacements.treePlacement(RarityFilter.onAverageOnceEvery(2), Blocks.OAK_SAPLING));
+
+        register(context, SPRUCE_MUSHROOM_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SPRUCE_MUSHROOM_KEY),
+                VegetationPlacements.treePlacement(RarityFilter.onAverageOnceEvery(2), Blocks.SPRUCE_SAPLING));
+
+        register(context, LYING_BIRCH_MUSHROOM_PlACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.LYING_BIRCH_MUSHROOM_KEY),
+                VegetationPlacements.treePlacement(RarityFilter.onAverageOnceEvery(4), Blocks.BIRCH_SAPLING));
+
+        register(context, LYING_SPRUCE_MUSHROOM_PlACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.LYING_SPRUCE_MUSHROOM_KEY),
+                VegetationPlacements.treePlacement(RarityFilter.onAverageOnceEvery(4), Blocks.SPRUCE_SAPLING));
     }
 
 
@@ -36,13 +48,11 @@ public class ModPlacedFeatures {
         return ResourceKey.create(Registries.PLACED_FEATURE, new ResourceLocation(VerdantVibes.MOD_ID, name));
     }
 
-    private static void register(BootstapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key, Holder<ConfiguredFeature<?, ?>> configuration,
-                                 List<PlacementModifier> modifiers) {
+    private static void register(BootstapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key, Holder<ConfiguredFeature<?, ?>> configuration, List<PlacementModifier> modifiers) {
         context.register(key, new PlacedFeature(configuration, List.copyOf(modifiers)));
     }
 
-    private static void register(BootstapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key, Holder<ConfiguredFeature<?, ?>> configuration,
-                                 PlacementModifier... modifiers) {
+    private static void register(BootstapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key, Holder<ConfiguredFeature<?, ?>> configuration, PlacementModifier... modifiers) {
         register(context, key, configuration, List.of(modifiers));
     }
 }

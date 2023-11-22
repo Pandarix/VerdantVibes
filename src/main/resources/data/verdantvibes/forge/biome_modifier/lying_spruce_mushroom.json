@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "features": "verdantvibes:lying_spruce_mushroom_placed",
+  "biomes": "#minecraft:is_taiga",
+  "step": "vegetal_decoration"
+}
