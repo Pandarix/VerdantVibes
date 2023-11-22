@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "features": "verdantvibes:burnweed",
+  "biomes": "minecraft:forest",
+  "step": "vegetal_decoration"
+}

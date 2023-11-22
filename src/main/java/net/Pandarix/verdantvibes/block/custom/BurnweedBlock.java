@@ -38,7 +38,7 @@ public class BurnweedBlock extends VerdantTallPlantBlock {
                 && pRandom.nextIntBetweenInclusive(0, 3) == 0)
         {
             Vec3 pos = pPos.getCenter();
-            pLevel.addParticle(ParticleInit.BURNWEED_PARTICLES.get(), pos.x, pos.y + 0.5, pos.z, 0, 0, 0);
+            pLevel.addParticle(ParticleInit.BURNWEED_PARTICLES.get(), pos.x, pos.y + (0.5 * pRandom.nextDouble()), pos.z, 0, 0, 0);
         }
         super.animateTick(pState, pLevel, pPos, pRandom);
     }

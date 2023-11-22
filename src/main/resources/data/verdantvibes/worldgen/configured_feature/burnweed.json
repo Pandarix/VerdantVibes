@@ -1,0 +1,78 @@
+{
+  "type": "minecraft:flower",
+  "config": {
+    "tries": 32,
+    "xz_spread": 3,
+    "y_spread": 2,
+    "feature": {
+      "feature": {
+        "type": "minecraft:simple_block",
+        "config": {
+          "to_place": {
+            "type": "minecraft:weighted_state_provider",
+            "entries": [
+              {
+                "weight": 1,
+                "data": {
+                  "Name": "verdantvibes:burnweed",
+                  "Properties": {
+                    "size": "0",
+                    "half": "lower"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "Name": "verdantvibes:burnweed",
+                  "Properties": {
+                    "size": "1",
+                    "half": "lower"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "Name": "verdantvibes:burnweed",
+                  "Properties": {
+                    "size": "2",
+                    "half": "lower"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "placement": [
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:all_of",
+            "predicates": [
+              {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  0,
+                  0
+                ],
+                "blocks": "minecraft:air"
+              },
+              {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  1,
+                  0
+                ],
+                "blocks": "minecraft:air"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
