@@ -1,6 +1,6 @@
 {
   "type": "forge:add_features",
-  "features": "verdantvibes:cattails",
+  "features": "verdantvibes:cattails_swamp",
   "biomes": "#forge:is_swamp",
   "step": "vegetal_decoration"
 }
