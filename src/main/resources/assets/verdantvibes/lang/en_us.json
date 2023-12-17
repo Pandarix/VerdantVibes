@@ -17,6 +17,7 @@
   "block.verdantvibes.lobelia": "Blue Lobelia",
   "block.verdantvibes.lobelia.info": "Lobelia siphilitica",
   "block.verdantvibes.potted_lobelia": "Potted Blue Lobelia",
+  "block.verdantvibes.tall_dragon_tree": "Tall Dragon Tree",
   "block.verdantvibes.dragon_tree": "Dragon Tree",
   "block.verdantvibes.dragon_tree.info": "Dracaena marginata",
   "block.verdantvibes.potted_dragon_tree": "Potted Dragon Tree",
@@ -27,6 +28,13 @@
   "block.verdantvibes.ivy": "Ivy",
   "block.verdantvibes.ivy.info": "Hedera helix",
   "block.verdantvibes.potted_ivy": "Potted Ivy",
+  "block.verdantvibes.cattails": "Cattails",
+  "block.verdantvibes.cattails.info": "Typha latifolia",
+  "block.verdantvibes.burnweed": "Burnweed",
+  "block.verdantvibes.burnweed.info": "Erechtites hieracifolia",
+  "block.verdantvibes.potted_burnweed": "Potted Burnweed",
+  "block.verdantvibes.bracket_mushroom": "Bracket Mushroom",
+  "block.verdantvibes.bracket_mushroom.info": "Ganoderma applanatum",
 
   "entity.minecraft.villager.verdantvibes.gardener": "Gardener",
 
